@@ -1,0 +1,12 @@
+{
+  "file-explorer:new-file-in-new-pane": [],
+  "keyword-highlighter:kh-create-new-keyword": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "H"
+    }
+  ]
+}

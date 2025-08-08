@@ -1,0 +1,2 @@
+- Use -sV
+- Use nc for banner Grabbing

@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "6079dfad13d0de67",
+    "type": "split",
+    "children": [
+      {
+        "id": "72c040484d05755e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e595ee40cc541ea4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Footprinting/b. Enumeration Methodology.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "b. Enumeration Methodology"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b437e7e4d617a494",
+    "type": "split",
+    "children": [
+      {
+        "id": "d07151341d435523",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5feb7861ae0772ba",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
+            }
+          },
+          {
+            "id": "cd07ff5d65134b00",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          },
+          {
+            "id": "a6d94007f78cb6ac",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Signet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "1ec5c6ecf6da003e",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e503dfa7a76561e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "761bd84786e02da6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Noctural/write-up.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rétrolien pour write-up"
+            }
+          },
+          {
+            "id": "81afd5b5a1539166",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Noctural/write-up.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liens sortants de write-up"
+            }
+          },
+          {
+            "id": "6c849467185f8de9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "fe39501a8dc06c8d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Noctural/write-up.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan de write-up"
+            }
+          },
+          {
+            "id": "6813c3f605da5431",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Le module complémentaire n'est plus actif."
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "terminal:Open terminal": false
+    }
+  },
+  "active": "e595ee40cc541ea4",
+  "lastOpenFiles": [
+    "2. Footprinting/a. Enumeration Principles.md",
+    "2. Footprinting/b. Enumeration Methodology.md",
+    "1. Nmap/g. Firewall and IDS IPS Evasion.md",
+    "2. Footprinting",
+    "1. Nmap/h. Evasion LAB.md",
+    "1. Nmap/b. Host and Port Scanning.md",
+    "1. Nmap/c. Saving the Results.md",
+    "1. Nmap/d. Service Enumeration.md",
+    "1. Nmap/e. Nmap Script Engine.md",
+    "1. Nmap/f. Performance.md",
+    "1. Nmap/target.html",
+    "1. Nmap/target",
+    "1. Nmap/a. Host Discovery.md",
+    "1. Nmap/19",
+    "PROLABS.md",
+    "1. Nmap/a. Host discovery/Sans titre.md",
+    "1. Nmap/a. Host discovery",
+    "1. Nmap",
+    "Noctural/write-up.md",
+    "Noctural/file.odt",
+    "Noctural/malicious.dtd",
+    "Noctural/malicious.dte",
+    "Noctural/Extracted_xlsx/docProps/core.xml"
+  ]
+}
