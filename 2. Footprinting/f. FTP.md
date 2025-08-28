@@ -85,3 +85,36 @@ $ nc -nv 10.129.14.136 21
 If TLS/SSL is activated (Can give informations about the certificate):
 $ openssl s_client -connect 10.129.14.136:21 -starttls ftp
 ```
+
+
+#### LAB ####
+
+```1. Which version of the FTP server is running on the target system? Submit the entire banner as the answer.
+
+> nmap -sC -sV -p21 10.129.202.5
+
+21/tcp   open  ftp
+| fingerprint-strings:
+|   GenericLines:
+|     220 InFreight FTP v1.1
+|     Invalid command: try being more creative
+|     Invalid command: try being more creative
+|   NULL:
+|_    220 InFreight FTP v1.1
+
+Answer: InFreight FTP v1.1
+
+
+2. Enumerate the FTP server and find the flag.txt file. Submit the contents of it as the answer.
+
+> ftp 10.129.202.5
+anonymous
+
+ftp> get flag.txt
+> cat flag.txt
+HTB{b7skjr4c76zhsds7fzhd4k3ujg7nhdjre}
+
+Answer: HTB{b7skjr4c76zhsds7fzhd4k3ujg7nhdjre}
+```
+
+
