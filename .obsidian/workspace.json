@@ -8,43 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e595ee40cc541ea4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Footprinting/b. Enumeration Methodology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "b. Enumeration Methodology"
-            }
-          },
-          {
-            "id": "4bc2c0cc0c7b1673",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.12"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.12"
-            }
-          },
-          {
             "id": "1ca09e5e5ef43460",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Footprinting/f. FTP.md",
+                "file": "2. Footprinting/k. IMAP - POP3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "f. FTP"
+              "title": "k. IMAP - POP3"
+            }
+          },
+          {
+            "id": "78115901e59c1b11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3. Information Gathering - Web/c. Utilizing WHOIS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "c. Utilizing WHOIS"
+            }
+          },
+          {
+            "id": "e11f13a2b1c59e19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3. Information Gathering - Web/c. Utilizing WHOIS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "c. Utilizing WHOIS"
             }
           }
         ],
@@ -80,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "2049",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +90,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Rechercher"
+              "title": "Search"
             }
           },
           {
@@ -121,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Noctural/write-up.md",
+                "file": "2. Footprinting/p. IPMI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour write-up"
+              "title": "Backlinks for p. IPMI"
             }
           },
           {
@@ -192,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -207,35 +209,47 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "1ca09e5e5ef43460",
+  "active": "e11f13a2b1c59e19",
   "lastOpenFiles": [
-    "2. Footprinting/b. Enumeration Methodology.md",
-    "2. Footprinting/a. Enumeration Principles.md",
+    "PT-process.webp",
+    "3. Information Gathering - Web/c. Utilizing WHOIS.md",
+    "3. Information Gathering - Web/b. WHOIS.md",
+    "3. Information Gathering - Web/a. Introduction.md",
+    "Pasted image 20250917172349.png",
+    "2. Footprinting/u. Footprinting Lab - Hard.md",
+    "3. Information Gathering - Web",
+    "tmp/id_rsa",
+    "2. Footprinting/k. IMAP - POP3.md",
+    "2. Footprinting/l. SNMP.md",
+    "2. Footprinting/j. SMTP.md",
+    "2. Footprinting/q. Linux Remote Management Protocols.md",
+    "2. Footprinting/s. Footprinting Lab - Easy.md",
+    "2. Footprinting/t. Footprinting Lab - Medium.md",
+    "2. Footprinting/r. Windows Remote Management Protocols.md",
+    "2. Footprinting/p. IPMI.md",
+    "2. Footprinting/1. image1.png",
+    "tmp/NFS",
+    "tmp/tickets/NFS",
+    "2. Footprinting/g. SMB.md",
+    "2. Footprinting/h. NFS.md",
+    "tmp/tickets/ticket4238791283729.txt",
+    "tmp/tickets/ticket4238791283728.txt",
+    "tmp/tickets/ticket4238791283727.txt",
+    "tmp/tickets/ticket4238791283726.txt",
+    "tmp/tickets/ticket4238791283725.txt",
+    "tmp/tickets/ticket4238791283724.txt",
+    "2. Footprinting/f. FTP.md",
+    "2. Footprinting/e. Staff.md",
     "2. Footprinting/c. Domain Information.md",
     "2. Footprinting/d. Cloud ressources.md",
-    "2. Footprinting/e. Staff.md",
-    "2. Footprinting/f. FTP.md",
-    "2. Footprinting/g. SMB.md",
+    "2. Footprinting/b. Enumeration Methodology.md",
+    "2. Footprinting/a. Enumeration Principles.md",
+    "2. Footprinting/i. DNS.md",
     "1. Nmap/g. Firewall and IDS IPS Evasion.md",
-    "2. Footprinting",
-    "1. Nmap/h. Evasion LAB.md",
-    "1. Nmap/b. Host and Port Scanning.md",
-    "1. Nmap/c. Saving the Results.md",
-    "1. Nmap/d. Service Enumeration.md",
-    "1. Nmap/e. Nmap Script Engine.md",
     "1. Nmap/f. Performance.md",
-    "1. Nmap/target.html",
-    "1. Nmap/target",
-    "1. Nmap/a. Host Discovery.md",
-    "1. Nmap/19",
-    "PROLABS.md",
-    "1. Nmap/a. Host discovery/Sans titre.md",
-    "1. Nmap/a. Host discovery",
-    "1. Nmap",
-    "Noctural/write-up.md",
-    "Noctural/file.odt",
-    "Noctural/malicious.dtd",
-    "Noctural/malicious.dte",
-    "Noctural/Extracted_xlsx/docProps/core.xml"
+    "1. Nmap/h. Evasion LAB.md",
+    "2. Footprinting/o. Oracle TNS.md",
+    "Pasted image 20250910180440.png",
+    "Pasted image 20250909222803.png"
   ]
 }
