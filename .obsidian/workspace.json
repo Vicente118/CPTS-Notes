@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Information Gathering - Web/c. Utilizing WHOIS.md",
+                "file": "3. Information Gathering - Web/s. Skills Assessment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "c. Utilizing WHOIS"
+              "title": "s. Skills Assessment"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Information Gathering - Web/c. Utilizing WHOIS.md",
+                "file": "3. Information Gathering - Web/p. Search Engine Discovery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "c. Utilizing WHOIS"
+              "title": "p. Search Engine Discovery"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "2049",
+                "query": "111",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -209,46 +209,47 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "e11f13a2b1c59e19",
+  "active": "78115901e59c1b11",
   "lastOpenFiles": [
-    "PT-process.webp",
+    "3. Information Gathering - Web/p. Search Engine Discovery.md",
+    "3. Information Gathering - Web/q. Web Archives.md",
+    "3. Information Gathering - Web/s. Skills Assessment.md",
+    "3. Information Gathering - Web/r. Automating Recon.md",
+    "3. Information Gathering - Web/o. Creepy Crawlies.md",
+    "2. Footprinting/q. Linux Remote Management Protocols.md",
+    "2. Footprinting/h. NFS.md",
+    "2. Footprinting/j. SMTP.md",
+    "3. Information Gathering - Web/i. Virtual Hosts.md",
+    "3. Information Gathering - Web/h. DNS Zone Transfers.md",
+    "3. Information Gathering - Web/j. Certificate Transparency Logs.md",
+    "3. Information Gathering - Web/k. Fingerprinting.md",
+    "3. Information Gathering - Web/l. Crawling.md",
+    "3. Information Gathering - Web/g. Subdomain Bruterforcing.md",
     "3. Information Gathering - Web/c. Utilizing WHOIS.md",
     "3. Information Gathering - Web/b. WHOIS.md",
     "3. Information Gathering - Web/a. Introduction.md",
+    "3. Information Gathering - Web/n. Well-Known URIs.md",
+    "3. Information Gathering - Web/m. robots.txt.md",
+    "3. Information Gathering - Web/e. Digging DNS.md",
+    "3. Information Gathering - Web/d. DNS.md",
+    "3. Information Gathering - Web/f. Subdomains.md",
+    "2. Footprinting/k. IMAP - POP3.md",
+    "PT-process.webp",
     "Pasted image 20250917172349.png",
     "2. Footprinting/u. Footprinting Lab - Hard.md",
     "3. Information Gathering - Web",
     "tmp/id_rsa",
-    "2. Footprinting/k. IMAP - POP3.md",
     "2. Footprinting/l. SNMP.md",
-    "2. Footprinting/j. SMTP.md",
-    "2. Footprinting/q. Linux Remote Management Protocols.md",
     "2. Footprinting/s. Footprinting Lab - Easy.md",
-    "2. Footprinting/t. Footprinting Lab - Medium.md",
-    "2. Footprinting/r. Windows Remote Management Protocols.md",
-    "2. Footprinting/p. IPMI.md",
     "2. Footprinting/1. image1.png",
     "tmp/NFS",
     "tmp/tickets/NFS",
-    "2. Footprinting/g. SMB.md",
-    "2. Footprinting/h. NFS.md",
     "tmp/tickets/ticket4238791283729.txt",
     "tmp/tickets/ticket4238791283728.txt",
     "tmp/tickets/ticket4238791283727.txt",
     "tmp/tickets/ticket4238791283726.txt",
     "tmp/tickets/ticket4238791283725.txt",
     "tmp/tickets/ticket4238791283724.txt",
-    "2. Footprinting/f. FTP.md",
-    "2. Footprinting/e. Staff.md",
-    "2. Footprinting/c. Domain Information.md",
-    "2. Footprinting/d. Cloud ressources.md",
-    "2. Footprinting/b. Enumeration Methodology.md",
-    "2. Footprinting/a. Enumeration Principles.md",
-    "2. Footprinting/i. DNS.md",
-    "1. Nmap/g. Firewall and IDS IPS Evasion.md",
-    "1. Nmap/f. Performance.md",
-    "1. Nmap/h. Evasion LAB.md",
-    "2. Footprinting/o. Oracle TNS.md",
     "Pasted image 20250910180440.png",
     "Pasted image 20250909222803.png"
   ]
