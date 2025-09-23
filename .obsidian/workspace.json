@@ -13,44 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Footprinting/k. IMAP - POP3.md",
+                "file": "4. Vulnerability Assessment/j. Working with Nessus Scan Output.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "k. IMAP - POP3"
-            }
-          },
-          {
-            "id": "78115901e59c1b11",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3. Information Gathering - Web/s. Skills Assessment.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "s. Skills Assessment"
-            }
-          },
-          {
-            "id": "e11f13a2b1c59e19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3. Information Gathering - Web/p. Search Engine Discovery.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "p. Search Engine Discovery"
+              "title": "j. Working with Nessus Scan Output"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,48 +180,52 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "78115901e59c1b11",
+  "active": "5feb7861ae0772ba",
   "lastOpenFiles": [
-    "3. Information Gathering - Web/p. Search Engine Discovery.md",
-    "3. Information Gathering - Web/q. Web Archives.md",
-    "3. Information Gathering - Web/s. Skills Assessment.md",
-    "3. Information Gathering - Web/r. Automating Recon.md",
-    "3. Information Gathering - Web/o. Creepy Crawlies.md",
-    "2. Footprinting/q. Linux Remote Management Protocols.md",
-    "2. Footprinting/h. NFS.md",
-    "2. Footprinting/j. SMTP.md",
-    "3. Information Gathering - Web/i. Virtual Hosts.md",
-    "3. Information Gathering - Web/h. DNS Zone Transfers.md",
-    "3. Information Gathering - Web/j. Certificate Transparency Logs.md",
-    "3. Information Gathering - Web/k. Fingerprinting.md",
-    "3. Information Gathering - Web/l. Crawling.md",
-    "3. Information Gathering - Web/g. Subdomain Bruterforcing.md",
-    "3. Information Gathering - Web/c. Utilizing WHOIS.md",
-    "3. Information Gathering - Web/b. WHOIS.md",
-    "3. Information Gathering - Web/a. Introduction.md",
-    "3. Information Gathering - Web/n. Well-Known URIs.md",
-    "3. Information Gathering - Web/m. robots.txt.md",
-    "3. Information Gathering - Web/e. Digging DNS.md",
-    "3. Information Gathering - Web/d. DNS.md",
-    "3. Information Gathering - Web/f. Subdomains.md",
-    "2. Footprinting/k. IMAP - POP3.md",
-    "PT-process.webp",
-    "Pasted image 20250917172349.png",
-    "2. Footprinting/u. Footprinting Lab - Hard.md",
+    "4. Vulnerability Assessment/b. Security Assessment.md",
+    "4. Vulnerability Assessment/c. Vulnerability Assessment.md",
+    "4. Vulnerability Assessment/d. Common Vulnerability Scoring System (CVSS).md",
+    "5. File Transfers/j. Evading Detection.md",
+    "6. Shells & Payloads",
+    "5. File Transfers/i. Detection.md",
+    "5. File Transfers/h. Living Off The Land.md",
+    "Pasted image 20250923180120.png",
+    "Pasted image 20250923180118.png",
+    "Pasted image 20250923180015.png",
+    "5. File Transfers/g. Catching Files over HTTP - HTTPS.md",
+    "5. File Transfers/f. Protected File Transfers.md",
+    "5. File Transfers/e. Miscellaneous File Transfer Methods.md",
+    "tmp/TRANSFERED.txt",
+    "tmp/New Text Document.txt",
+    "Pasted image 20250923170453.png",
+    "Pasted image 20250923170423.png",
+    "5. File Transfers/d. Transferring Files with Code.md",
+    "5. File Transfers/c. Linux File Transfer Methods.md",
+    "tmp/upload_nix.txt",
+    "tmp/upload_nix.zip",
+    "5. File Transfers/b. Windows File Transfer Methods.md",
+    "5. File Transfers/a. File Transfers.md",
+    "4. Vulnerability Assessment/o. Reporting.md",
+    "Pasted image 20250923132410.png",
+    "4. Vulnerability Assessment/n. OpenVAS Scan.md",
+    "4. Vulnerability Assessment/m. Getting Started with OpenVAS.md",
+    "4. Vulnerability Assessment/l. Nessus Skills Assessment.md",
+    "4. Vulnerability Assessment/i. Advanced Settings.md",
+    "4. Vulnerability Assessment/k. Scanning Issues.md",
+    "4. Vulnerability Assessment/j. Working with Nessus Scan Output.md",
+    "Pasted image 20250923122246.png",
+    "Pasted image 20250923122238.png",
+    "Pasted image 20250923122206.png",
+    "Pasted image 20250923122156.png",
+    "4. Vulnerability Assessment/h. Nessus Scan.md",
+    "4. Vulnerability Assessment/g. Getting Started with Nessus.md",
+    "4. Vulnerability Assessment/f. Vulnerability Scanning Overview.md",
+    "4. Vulnerability Assessment/e. Common Vulnerabilities and Exposures (CVEs).md",
+    "4. Vulnerability Assessment/a. Assessment Standards.md",
+    "5. File Transfers",
+    "4. Vulnerability Assessment",
     "3. Information Gathering - Web",
     "tmp/id_rsa",
-    "2. Footprinting/l. SNMP.md",
-    "2. Footprinting/s. Footprinting Lab - Easy.md",
-    "2. Footprinting/1. image1.png",
-    "tmp/NFS",
-    "tmp/tickets/NFS",
-    "tmp/tickets/ticket4238791283729.txt",
-    "tmp/tickets/ticket4238791283728.txt",
-    "tmp/tickets/ticket4238791283727.txt",
-    "tmp/tickets/ticket4238791283726.txt",
-    "tmp/tickets/ticket4238791283725.txt",
-    "tmp/tickets/ticket4238791283724.txt",
-    "Pasted image 20250910180440.png",
-    "Pasted image 20250909222803.png"
+    "tmp/NFS"
   ]
 }
