@@ -1,5 +1,6 @@
 {
   "spellcheck": false,
   "foldIndent": false,
-  "foldHeading": false
+  "foldHeading": false,
+  "promptDelete": false
 }
