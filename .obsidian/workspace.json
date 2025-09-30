@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8. Password Attacks/m. Attacking Windows Crendential Manager.md",
+                "file": "8. Password Attacks/o. Credential Hunting in Windows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "m. Attacking Windows Crendential Manager"
+              "title": "o. Credential Hunting in Windows"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1ec5c6ecf6da003e",
@@ -183,51 +182,51 @@
   },
   "active": "206fce92cb31ab8a",
   "lastOpenFiles": [
+    "8. Password Attacks/n. Attacking Active Directory and NTDS.dit.md",
+    "8. Password Attacks/o. Credential Hunting in Windows.md",
+    "tmp/users.txt~",
+    "tmp/fasttrack.txt",
+    "tmp/list.txt",
+    "tmp/users.txt",
+    "Pasted image 20250930182832.png",
+    "8. Password Attacks/m. Attacking Windows Crendential Manager.md",
+    "Pasted image 20250930173536.png",
+    "Pasted image 20250930173534.png",
+    "tmp/LaZagne.exe",
+    "Pasted image 20250930172947.png",
+    "tmp/mimikatz.exe",
+    "Pasted image 20250930172518.png",
+    "Pasted image 20250930172513.png",
+    "tmp/eventvwr-bypassuac-64.exe",
+    "tmp/eventvwr-bypassuac.c",
+    "tmp/shell.exe",
+    "tmp/strings64.exe",
+    "Pasted image 20250930155141.png",
+    "Pasted image 20250930154848.png",
     "Pasted image 20250930153916.png",
     "8. Password Attacks/l. Attacking LSASS.md",
-    "8. Password Attacks/m. Attacking Windows Crendential Manager.md",
-    "tmp/intra-uuid-5c4f1e3c-3953-41e7-af53-cebca4cfb894-6664192-fimazouz",
-    "tmp/dump",
-    "tmp/lsass.DMP",
     "8. Password Attacks/k. Attacking SAM, SYSTEM and SECURITY.md",
     "Pasted image 20250930143455.png",
     "8. Password Attacks/j. Windows Authentication Process.md",
-    "tmp/shell.exe",
-    "Pasted image 20250929200351.png",
-    "Pasted image 20250929193932.png",
     "8. Password Attacks/i. Spraying, Stuffing, and Defaults.md",
     "tmp/etcpasswd.md",
-    "Pasted image 20250909222803.png",
     "8. Password Attacks/f. Cracking Protected Files.md",
     "8. Password Attacks/g. Cracking Protected Archives.md",
-    "tmp/hash",
-    "tmp/Notes.zip",
     "8. Password Attacks/h. Network Services.md",
-    "Pasted image 20250929182252.png",
-    "tmp/flag.txt",
-    "tmp/users.txt",
-    "tmp/password.list",
-    "tmp/username.list",
-    "Pasted image 20250929163700.png",
     "8. Password Attacks/e. Writing Custom Wordlists and Rules.md",
     "8. Password Attacks/d. Introduction to Hashcat.md",
     "8. Password Attacks/c. Introduction to John The Ripper.md",
     "8. Password Attacks/b. Introduction to Password Cracking.md",
-    "2. Footprinting/1. image1.png",
     "8. Password Attacks/a. Introduction.md",
     "7. Using The Metasploit Framework/l. Firewall and IDS-IPS Evasion.md",
     "7. Using The Metasploit Framework/Untitled.md",
     "7. Using The Metasploit Framework/k. Introduction to MSFVenom.md",
-    "Pasted image 20250928183228.png",
-    "Pasted image 20250928183215.png",
     "7. Using The Metasploit Framework/j. Meterpreter.md",
     "7. Using The Metasploit Framework/k. Writing and Importing Modules.md",
     "7. Using The Metasploit Framework/i. Sessions.md",
     "6. Shells & Payloads/g. Infiltrating Unix-Linux.md",
     "7. Using The Metasploit Framework/h. Plugings.md",
-    "Pasted image 20250928152921.png",
     "7. Using The Metasploit Framework/g. Databases.md",
-    "7. Using The Metasploit Framework/f. Encoders.md",
-    "7. Using The Metasploit Framework/e. Payloads.md"
+    "7. Using The Metasploit Framework/f. Encoders.md"
   ]
 }
