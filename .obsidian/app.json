@@ -2,5 +2,6 @@
   "spellcheck": false,
   "foldIndent": false,
   "foldHeading": false,
-  "promptDelete": false
+  "promptDelete": false,
+  "alwaysUpdateLinks": true
 }

@@ -69,7 +69,7 @@ One particularly useful tool for dumping hashes offline is Impacket's `secretsd
 Using `secretsdump` is straightforward. We simply run the script with Python and specify each of the hive files we retrieved from the target host.
 
 ```shell
- python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
 ```
 
 ```shell
