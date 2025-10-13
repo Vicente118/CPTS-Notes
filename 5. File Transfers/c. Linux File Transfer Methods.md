@@ -69,7 +69,7 @@ sudo systemctl enable ssh
 ```
 #### Checking for SSH Listening Port
 ```shell
-netstat -lnpt\
+netstat -lnpt
 
 tcp   0   0 0.0.0.0:22     0.0.0.0:*   LISTEN      - 
 ```

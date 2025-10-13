@@ -73,6 +73,10 @@ We can also use [findstr](https://docs.microsoft.com/en-us/windows-server/admini
 C:\> findstr /SIM /C:"password" *.txt *.ini *.cfg *.config *.xml *.git *.ps1 *.yml
 ```
 
+##### Find certain extentions
+```powershell
+Get-ChildItem -path C:\ -filter *.txt -file -ErrorAction silentlycontinue -recurse
+```
 ## Additional considerations
 Here are some other places we should keep in mind when credential hunting:
 - Passwords in Group Policy in the SYSVOL share

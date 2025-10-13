@@ -1,0 +1,8 @@
+# Nmap 7.93 scan initiated Fri Oct 10 18:18:50 2025 as: nmap -sC -sV -Pn -iL hosts.txt -oA internal
+Host: 172.16.119.7 ()	Status: Up
+Host: 172.16.119.7 ()	Ports: 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/	Ignored State: filtered (999)
+Host: 172.16.119.10 ()	Status: Up
+Host: 172.16.119.10 ()	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 445/open/tcp//microsoft-ds?///, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/	Ignored State: filtered (997)
+Host: 172.16.119.11 ()	Status: Up
+Host: 172.16.119.11 ()	Ports: 53/open/tcp//domain//Simple DNS Plus/, 88/open/tcp//kerberos-sec//Microsoft Windows Kerberos (server time: 2025-10-10 16:20:12Z)/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 389/open/tcp//ldap//Microsoft Windows Active Directory LDAP (Domain: nexura.htb0., Site: Default-First-Site-Name)/, 445/open/tcp//microsoft-ds?///, 464/open/tcp//kpasswd5?///, 593/open/tcp//ncacn_http//Microsoft Windows RPC over HTTP 1.0/, 636/open/tcp//tcpwrapped///, 3268/open/tcp//ldap//Microsoft Windows Active Directory LDAP (Domain: nexura.htb0., Site: Default-First-Site-Name)/, 3269/open/tcp//tcpwrapped///, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/	Ignored State: filtered (988)
+# Nmap done at Fri Oct 10 18:21:25 2025 -- 3 IP addresses (3 hosts up) scanned in 155.26 seconds

