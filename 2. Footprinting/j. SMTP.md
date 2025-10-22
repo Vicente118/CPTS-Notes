@@ -260,7 +260,7 @@ MAC Address: 00:00:00:00:00:00 (VMware)
 
 2. Enumerate the SMTP service even further and find the username that exists on the system. Submit it as the answer.
 	 ```bash
-	 > smtp-user-enum  10.129.105.94 25 -U footprinting-wordlist.txt -m RCPT
+> smtp-user-enum  10.129.105.94 25 -U footprinting-wordlist.txt -m RCPT
 	
 VRFY did not work but RCPT worked:
 
