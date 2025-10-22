@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
+                "file": "10. Pivoting, Tunneling, and Port Forwarding/e. Meterpreter Tunneling & Port Forwarding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "m. Attacking Common Services - Hard"
+              "title": "e. Meterpreter Tunneling & Port Forwarding"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9. Attacking Common Services/g. Attacking SQL Databases.md",
+                "file": "10. Pivoting, Tunneling, and Port Forwarding/d. Remote-Reverse Port Forwarding with SSH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "g. Attacking SQL Databases"
+              "title": "d. Remote-Reverse Port Forwarding with SSH"
             }
           }
         ]
@@ -197,9 +197,22 @@
   },
   "active": "dd8df111f7c4f3af",
   "lastOpenFiles": [
-    "tmp/shell.ps1",
-    "9. Attacking Common Services/g. Attacking SQL Databases.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/d. Remote-Reverse Port Forwarding with SSH.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/e. Meterpreter Tunneling & Port Forwarding.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/c. Dynamic Port Forwarding with SSH and SOCKS Tunneling.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/b. The Networking Behind Pivoting.md",
+    "tmp/backupscript.exe",
+    "Pasted image 20251022200418.png",
+    "Pasted image 20251022200412.png",
+    "Pasted image 20251022195305.png",
+    "Pasted image 20251022191410.png",
+    "Pasted image 20251022190309.png",
     "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
+    "9. Attacking Common Services/g. Attacking SQL Databases.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/a. Introduction to Pivoting, Tunneling, and Port Forwarding.md",
+    "Pasted image 20251022181657.png",
+    "10. Pivoting, Tunneling, and Port Forwarding",
+    "tmp/shell.ps1",
     "9. Attacking Common Services/h. Attacking RDP.md",
     "5. File Transfers/a. File Transfers.md",
     "tmp/simon.txt",
@@ -210,9 +223,6 @@
     "tmp/creds.txt",
     "9. Attacking Common Services/f. Attacking SMB.md",
     "tmp/Projects",
-    "tmp/OPS",
-    "tmp/IT",
-    "tmp/HR",
     "9. Attacking Common Services/l. Attacking Common Services - Medium.md",
     "9. Attacking Common Services/k. Attacking Common Services - Easy.md",
     "9. Attacking Common Services/j. Attacking Email Services.md",
@@ -229,19 +239,9 @@
     "Pasted image 20251021190948.png",
     "Pasted image 20251021190946.png",
     "Pasted image 20251021190939.png",
-    "Pasted image 20251021152750.png",
-    "Pasted image 20251021152651.png",
-    "Pasted image 20251021152607.png",
     "8. Password Attacks/t. Pass The Hash (PtH).md",
-    "Pasted image 20251021143857.png",
     "9. Attacking Common Services/g. Latest SMB Vulnerabilities.md",
-    "Pasted image 20251018130306.png",
-    "Pasted image 20251018124312.png",
     "8. Password Attacks/a. Introduction.md",
-    "8. Password Attacks/z. Skill Assessment - Password Attacks.md",
-    "8. Password Attacks/n. Attacking Active Directory and NTDS.dit.md",
-    "8. Password Attacks/m. Attacking Windows Crendential Manager.md",
-    "8. Password Attacks/k. Attacking SAM, SYSTEM and SECURITY.md",
-    "8. Password Attacks/l. Attacking LSASS.md"
+    "8. Password Attacks/z. Skill Assessment - Password Attacks.md"
   ]
 }
