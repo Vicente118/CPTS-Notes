@@ -13,6 +13,34 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "10. Pivoting, Tunneling, and Port Forwarding/m. SOCKS5 Tunneling with Chisel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "m. SOCKS5 Tunneling with Chisel"
+            }
+          },
+          {
+            "id": "3407c720d177d3df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0. Introduction To Active Directory/a. Why Active Directory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "a. Why Active Directory"
+            }
+          },
+          {
+            "id": "ddfcb3f0f1499766",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "10. Pivoting, Tunneling, and Port Forwarding/e. Meterpreter Tunneling & Port Forwarding.md",
                 "mode": "source",
                 "source": false
@@ -20,22 +48,9 @@
               "icon": "lucide-file",
               "title": "e. Meterpreter Tunneling & Port Forwarding"
             }
-          },
-          {
-            "id": "3b086cfd62ac0c38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10. Pivoting, Tunneling, and Port Forwarding/d. Remote-Reverse Port Forwarding with SSH.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "d. Remote-Reverse Port Forwarding with SSH"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "impersonate",
+                "query": "LSASS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -195,53 +210,53 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "dd8df111f7c4f3af",
+  "active": "3407c720d177d3df",
   "lastOpenFiles": [
-    "10. Pivoting, Tunneling, and Port Forwarding/d. Remote-Reverse Port Forwarding with SSH.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/p. Skill Assessment.md",
+    "0. Introduction To Active Directory/a. Why Active Directory.md",
+    "0. Introduction To Active Directory",
+    "10. Pivoting, Tunneling, and Port Forwarding/q..md",
     "10. Pivoting, Tunneling, and Port Forwarding/e. Meterpreter Tunneling & Port Forwarding.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/k. Port Forwarding with Windows Netsh.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/j. Web Server Pivoting with Web Rpivot.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/i. SSH Pivoting with Sshuttle.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/h. SSH for Windows - plink.exe.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/g. Socat Redirection with a Bind Shell.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/l. DNS Tunneling with Dnscat2.md",
+    "8. Password Attacks/k. Attacking SAM, SYSTEM and SECURITY.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/d. Remote-Reverse Port Forwarding with SSH.md",
+    "tmp/system.save",
+    "tmp/security.exe",
+    "tmp/sam.save",
+    "8. Password Attacks/o. Credential Hunting in Windows.md",
+    "tmp/LaZagne.exe",
+    "tmp/Flag.txt",
+    "8. Password Attacks/t. Pass The Hash (PtH).md",
+    "tmp/x64",
+    "8. Password Attacks/l. Attacking LSASS.md",
+    "tmp/hash",
+    "tmp/dump",
+    "10. Pivoting, Tunneling, and Port Forwarding/m. SOCKS5 Tunneling with Chisel.md",
+    "tmp/lsass.dmp",
+    "5. File Transfers/b. Windows File Transfer Methods.md",
+    "5. File Transfers/f. Protected File Transfers.md",
+    "8. Password Attacks/j. Windows Authentication Process.md",
     "10. Pivoting, Tunneling, and Port Forwarding/c. Dynamic Port Forwarding with SSH and SOCKS Tunneling.md",
     "10. Pivoting, Tunneling, and Port Forwarding/b. The Networking Behind Pivoting.md",
-    "tmp/backupscript.exe",
-    "Pasted image 20251022200418.png",
-    "Pasted image 20251022200412.png",
-    "Pasted image 20251022195305.png",
-    "Pasted image 20251022191410.png",
-    "Pasted image 20251022190309.png",
-    "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
-    "9. Attacking Common Services/g. Attacking SQL Databases.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/f. Socat Redirection with a Reverse Shell.md",
+    "10. Pivoting, Tunneling, and Port Forwarding/n. ICMP Tunneling with SOCKS.md",
     "10. Pivoting, Tunneling, and Port Forwarding/a. Introduction to Pivoting, Tunneling, and Port Forwarding.md",
-    "Pasted image 20251022181657.png",
-    "10. Pivoting, Tunneling, and Port Forwarding",
-    "tmp/shell.ps1",
-    "9. Attacking Common Services/h. Attacking RDP.md",
-    "5. File Transfers/a. File Transfers.md",
-    "tmp/simon.txt",
-    "tmp/random.txt",
-    "tmp/john.txt",
-    "tmp/fiona.txt",
-    "tmp/secrets.txt",
-    "tmp/creds.txt",
-    "9. Attacking Common Services/f. Attacking SMB.md",
-    "tmp/Projects",
-    "9. Attacking Common Services/l. Attacking Common Services - Medium.md",
-    "9. Attacking Common Services/k. Attacking Common Services - Easy.md",
-    "9. Attacking Common Services/j. Attacking Email Services.md",
-    "2. Footprinting/k. IMAP - POP3.md",
-    "2. Footprinting/1. image1.png",
-    "9. Attacking Common Services/i. Attacking DNS.md",
-    "9. Attacking Common Services/d. Finding Sensitive Information.md",
-    "9. Attacking Common Services/c. Service Misconfigurations.md",
-    "9. Attacking Common Services/e. Attacking FTP.md",
-    "2. Footprinting/u. Footprinting Lab - Hard.md",
-    "2. Footprinting/j. SMTP.md",
-    "9. Attacking Common Services/b. The Concept of Attacks.md",
-    "9. Attacking Common Services/a. Interacting with Common Services.md",
-    "Pasted image 20251021190948.png",
-    "Pasted image 20251021190946.png",
-    "Pasted image 20251021190939.png",
-    "8. Password Attacks/t. Pass The Hash (PtH).md",
-    "9. Attacking Common Services/g. Latest SMB Vulnerabilities.md",
-    "8. Password Attacks/a. Introduction.md",
-    "8. Password Attacks/z. Skill Assessment - Password Attacks.md"
+    "10. Pivoting, Tunneling, and Port Forwarding/o. RDP and SOCKS Tunneling with SocksOverRDP.md",
+    "Pasted image 20251024132100.png",
+    "Pasted image 20251024132043.png",
+    "Pasted image 20251024131915.png",
+    "Pasted image 20251024131817.png",
+    "PassTheTicketDiagram.svg",
+    "Soulmate.md",
+    "Pasted image 20251023220302.png",
+    "Pasted image 20251023220202.png",
+    "Pasted image 20251023214607.png",
+    "Pasted image 20251023214606.png",
+    "Pasted image 20251023213800.png"
   ]
 }
