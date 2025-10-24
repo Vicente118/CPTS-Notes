@@ -8,49 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dd8df111f7c4f3af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10. Pivoting, Tunneling, and Port Forwarding/m. SOCKS5 Tunneling with Chisel.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "m. SOCKS5 Tunneling with Chisel"
-            }
-          },
-          {
             "id": "3407c720d177d3df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. Introduction To Active Directory/a. Why Active Directory.md",
+                "file": "0. Introduction To Active Directory/d. Active Directory Objects.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "a. Why Active Directory"
-            }
-          },
-          {
-            "id": "ddfcb3f0f1499766",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10. Pivoting, Tunneling, and Port Forwarding/e. Meterpreter Tunneling & Port Forwarding.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "e. Meterpreter Tunneling & Port Forwarding"
+              "title": "d. Active Directory Objects"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1ec5c6ecf6da003e",
@@ -212,8 +182,18 @@
   },
   "active": "3407c720d177d3df",
   "lastOpenFiles": [
-    "10. Pivoting, Tunneling, and Port Forwarding/p. Skill Assessment.md",
+    "0. Introduction To Active Directory/c. Active Directory Terminology.md",
+    "0. Introduction To Active Directory/d. Active Directory Objects.md",
+    "Pasted image 20251024191218.png",
+    "Pasted image 20251024181715.png",
+    "Pasted image 20250917172349.png",
+    "0. Introduction To Active Directory/b. Active Directory Structure.md",
+    "Pasted image 20251024172903.png",
+    "Pasted image 20251024172644.png",
     "0. Introduction To Active Directory/a. Why Active Directory.md",
+    "8. Password Attacks/b. Introduction to Password Cracking.md",
+    "Pasted image 20251024171947.png",
+    "10. Pivoting, Tunneling, and Port Forwarding/p. Skill Assessment.md",
     "0. Introduction To Active Directory",
     "10. Pivoting, Tunneling, and Port Forwarding/q..md",
     "10. Pivoting, Tunneling, and Port Forwarding/e. Meterpreter Tunneling & Port Forwarding.md",
@@ -243,20 +223,9 @@
     "8. Password Attacks/j. Windows Authentication Process.md",
     "10. Pivoting, Tunneling, and Port Forwarding/c. Dynamic Port Forwarding with SSH and SOCKS Tunneling.md",
     "10. Pivoting, Tunneling, and Port Forwarding/b. The Networking Behind Pivoting.md",
-    "10. Pivoting, Tunneling, and Port Forwarding/f. Socat Redirection with a Reverse Shell.md",
-    "10. Pivoting, Tunneling, and Port Forwarding/n. ICMP Tunneling with SOCKS.md",
-    "10. Pivoting, Tunneling, and Port Forwarding/a. Introduction to Pivoting, Tunneling, and Port Forwarding.md",
-    "10. Pivoting, Tunneling, and Port Forwarding/o. RDP and SOCKS Tunneling with SocksOverRDP.md",
     "Pasted image 20251024132100.png",
     "Pasted image 20251024132043.png",
     "Pasted image 20251024131915.png",
-    "Pasted image 20251024131817.png",
-    "PassTheTicketDiagram.svg",
-    "Soulmate.md",
-    "Pasted image 20251023220302.png",
-    "Pasted image 20251023220202.png",
-    "Pasted image 20251023214607.png",
-    "Pasted image 20251023214606.png",
-    "Pasted image 20251023213800.png"
+    "Pasted image 20251024131817.png"
   ]
 }
