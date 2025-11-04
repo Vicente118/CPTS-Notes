@@ -1,4 +1,4 @@
-In this attack, we use a stolen Kerberos ticket to move laterally instead of an NTLM password hash.
+zIn this attack, we use a stolen Kerberos ticket to move laterally instead of an NTLM password hash.
 
 ## Kerberos protocol refresher
 The Kerberos authentication system is ticket-based. The central idea behind Kerberos is not to give an account password to every service you use. Instead, Kerberos keeps all tickets on your local system and presents each service only the specific ticket for that service, preventing a ticket from being used for another purpose.

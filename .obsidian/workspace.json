@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a4d3a351dddfff7d",
+        "id": "ba559547fed09762",
         "type": "tabs",
         "children": [
           {
-            "id": "3407c720d177d3df",
+            "id": "036d89d8e5b2951f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11. Introduction to Active Directory Enumeration & Attacks/i. Password Spraying - Making a Target User List.md",
+                "file": "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "i. Password Spraying - Making a Target User List"
+              "title": "o. Living Off the Land"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "kerbrute",
+                "query": "powerview",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -181,10 +181,27 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "3407c720d177d3df",
+  "active": "036d89d8e5b2951f",
   "lastOpenFiles": [
-    "11. Introduction to Active Directory Enumeration & Attacks/h. Enumerating & Retrieving Password Policies.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/n. Credentialed Enumeration - from Windows.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
+    "tmp/20251104062533_Ingested.zip",
+    "tmp/ilfreight_bh.zip",
+    "11. Introduction to Active Directory Enumeration & Attacks/m. Credentialed Enumeration - from Linux.md",
+    "Pasted image 20251103165806.png",
+    "Pasted image 20251103144914.png",
+    "11. Introduction to Active Directory Enumeration & Attacks/l. Enumerating Security Controls.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/k. Internal Password Praying - from Windows.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/j. Internal Password Spraying - from Linux.md",
     "11. Introduction to Active Directory Enumeration & Attacks/i. Password Spraying - Making a Target User List.md",
+    "8. Password Attacks/u. Pass the Ticket (PtT) from Windows.md",
+    "8. Password Attacks/v. Pass the Ticket (PtT) from Linux.md",
+    "8. Password Attacks/t. Pass The Hash (PtH).md",
+    "8. Password Attacks/q. Credentials Hunting in Linux.md",
+    "Pasted image 20251028204709.png",
+    "Imagery.md",
+    "tmp/exploit.py",
+    "11. Introduction to Active Directory Enumeration & Attacks/h. Enumerating & Retrieving Password Policies.md",
     "11. Introduction to Active Directory Enumeration & Attacks/g. Password Spraying Overview.md",
     "tmp/hash.txt",
     "tmp/New Text Document.txt",
@@ -200,34 +217,17 @@
     "Pasted image 20251026164023.png",
     "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
     "tmp/valid_ad_users",
-    "tmp/tetsd",
-    "tmp/new file",
     "Pasted image 20251026151721.png",
     "Pasted image 20251026151708.png",
     "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
     "11. Introduction to Active Directory Enumeration & Attacks/c. External Recon and Enumeration Principles.md",
     "Pasted image 20251025221821.png",
-    "Pasted image 20251025221742.png",
-    "Pasted image 20251025220518.png",
-    "Pasted image 20251025220456.png",
     "Conversor.md",
     "11. Introduction to Active Directory Enumeration & Attacks/b. Scenario.md",
     "11. Introduction to Active Directory Enumeration & Attacks/a. Tools of the Trade.md",
     "8. Password Attacks/n. Attacking Active Directory and NTDS.dit.md",
     "0. Introduction To Active Directory/i. Active Directory Groups.md",
-    "11. Introduction to Active Directory Enumeration & Attacks",
     "0. Introduction To Active Directory/h. User and Machine Accounts.md",
-    "0. Introduction To Active Directory/g. NLTM Authentication.md",
-    "0. Introduction To Active Directory/f. Kerberos, DNS, LDAP, MSRPC.md",
-    "0. Introduction To Active Directory/d. Active Directory Objects.md",
-    "0. Introduction To Active Directory/c. Active Directory Terminology.md",
-    "0. Introduction To Active Directory/e. Active Directory Functionality.md",
-    "8. Password Attacks/u. Pass the Ticket (PtT) from Windows.md",
-    "8. Password Attacks/t. Pass The Hash (PtH).md",
-    "8. Password Attacks/j. Windows Authentication Process.md",
-    "8. Password Attacks/k. Attacking SAM, SYSTEM and SECURITY.md",
-    "8. Password Attacks/l. Attacking LSASS.md",
-    "8. Password Attacks/m. Attacking Windows Crendential Manager.md",
-    "8. Password Attacks/o. Credential Hunting in Windows.md"
+    "0. Introduction To Active Directory/g. NLTM Authentication.md"
   ]
 }
