@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
+                "file": "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "o. Living Off the Land"
+              "title": "d. Initial Enumeration of the Domain"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "powerview",
+                "query": "asreproast ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Signet"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,11 +184,26 @@
   },
   "active": "036d89d8e5b2951f",
   "lastOpenFiles": [
+    "11. Introduction to Active Directory Enumeration & Attacks/a. Tools of the Trade.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/r. Access Control List (ACL) Abuse Primer.md",
+    "Pasted image 20251104192534.png",
+    "Pasted image 20251104192120.png",
+    "Pasted image 20251104191910.png",
+    "Pasted image 20251104191908.png",
+    "Pasted image 20251104191903.png",
+    "11. Introduction to Active Directory Enumeration & Attacks/q. Kerberoasting - from Windows.md",
+    "tmp/kerber",
+    "Pasted image 20251104182450.png",
+    "Pasted image 20251104182249.png",
+    "11. Introduction to Active Directory Enumeration & Attacks/p. Kerberoasting - from Linux.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/m. Credentialed Enumeration - from Linux.md",
+    "tmp/tgs.hash",
     "11. Introduction to Active Directory Enumeration & Attacks/n. Credentialed Enumeration - from Windows.md",
     "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
+    "tmp/New Text Document.txt",
+    "Pasted image 20251104165144.png",
     "tmp/20251104062533_Ingested.zip",
     "tmp/ilfreight_bh.zip",
-    "11. Introduction to Active Directory Enumeration & Attacks/m. Credentialed Enumeration - from Linux.md",
     "Pasted image 20251103165806.png",
     "Pasted image 20251103144914.png",
     "11. Introduction to Active Directory Enumeration & Attacks/l. Enumerating Security Controls.md",
@@ -198,36 +214,20 @@
     "8. Password Attacks/v. Pass the Ticket (PtT) from Linux.md",
     "8. Password Attacks/t. Pass The Hash (PtH).md",
     "8. Password Attacks/q. Credentials Hunting in Linux.md",
-    "Pasted image 20251028204709.png",
     "Imagery.md",
     "tmp/exploit.py",
     "11. Introduction to Active Directory Enumeration & Attacks/h. Enumerating & Retrieving Password Policies.md",
     "11. Introduction to Active Directory Enumeration & Attacks/g. Password Spraying Overview.md",
     "tmp/hash.txt",
-    "tmp/New Text Document.txt",
     "tmp/script.sh",
     "11. Introduction to Active Directory Enumeration & Attacks/f. LLMNR & NBT-NS Poisoning - from Windows.md",
     "11. Introduction to Active Directory Enumeration & Attacks/e. LLMNR & NBT-NS Poisoning - from Linux.md",
-    "Pasted image 20251027161906.png",
-    "Pasted image 20251027161808.png",
-    "Pasted image 20251027161749.png",
     "tmp/backup_agent",
     "tmp/wley",
-    "tmp/lab_adm",
-    "Pasted image 20251026164023.png",
     "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
-    "tmp/valid_ad_users",
-    "Pasted image 20251026151721.png",
-    "Pasted image 20251026151708.png",
     "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
     "11. Introduction to Active Directory Enumeration & Attacks/c. External Recon and Enumeration Principles.md",
-    "Pasted image 20251025221821.png",
     "Conversor.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/b. Scenario.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/a. Tools of the Trade.md",
-    "8. Password Attacks/n. Attacking Active Directory and NTDS.dit.md",
-    "0. Introduction To Active Directory/i. Active Directory Groups.md",
-    "0. Introduction To Active Directory/h. User and Machine Accounts.md",
-    "0. Introduction To Active Directory/g. NLTM Authentication.md"
+    "11. Introduction to Active Directory Enumeration & Attacks/b. Scenario.md"
   ]
 }
