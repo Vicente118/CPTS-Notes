@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ba559547fed09762",
+        "id": "1a33d53f345e09cd",
         "type": "tabs",
         "children": [
           {
-            "id": "036d89d8e5b2951f",
+            "id": "0f6bb744b6ed6760",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
+                "file": "11. Introduction to Active Directory Enumeration & Attacks/v. Privileged Access.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "d. Initial Enumeration of the Domain"
+              "title": "v. Privileged Access"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "asreproast ",
+                "query": "wley",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Signet"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,52 +181,53 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "036d89d8e5b2951f",
+  "active": "0f6bb744b6ed6760",
   "lastOpenFiles": [
-    "11. Introduction to Active Directory Enumeration & Attacks/a. Tools of the Trade.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/r. Access Control List (ACL) Abuse Primer.md",
-    "Pasted image 20251104192534.png",
-    "Pasted image 20251104192120.png",
-    "Pasted image 20251104191910.png",
-    "Pasted image 20251104191908.png",
-    "Pasted image 20251104191903.png",
-    "11. Introduction to Active Directory Enumeration & Attacks/q. Kerberoasting - from Windows.md",
-    "tmp/kerber",
-    "Pasted image 20251104182450.png",
-    "Pasted image 20251104182249.png",
-    "11. Introduction to Active Directory Enumeration & Attacks/p. Kerberoasting - from Linux.md",
+    "Pasted image 20251109195543.png",
+    "Pasted image 20251109195542.png",
+    "Pasted image 20251109195524.png",
+    "Pasted image 20251109195131.png",
+    "Pasted image 20251109195104.png",
+    "11. Introduction to Active Directory Enumeration & Attacks/u. DCSync.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/v. Privileged Access.md",
+    "tmp/mimikatz.log",
+    "11. Introduction to Active Directory Enumeration & Attacks/t. ACL Abuse Tactics.md",
+    "Pasted image 20251109170710.png",
+    "Pasted image 20251109164033.png",
+    "tmp/hash",
     "11. Introduction to Active Directory Enumeration & Attacks/m. Credentialed Enumeration - from Linux.md",
-    "tmp/tgs.hash",
+    "8. Password Attacks/z. Skill Assessment - Password Attacks.md",
+    "8. Password Attacks/g. Cracking Protected Archives.md",
+    "8. Password Attacks/k. Attacking SAM, SYSTEM and SECURITY.md",
+    "8. Password Attacks/j. Windows Authentication Process.md",
+    "8. Password Attacks/i. Spraying, Stuffing, and Defaults.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/s. ACL Enumeration.md",
+    "8. Password Attacks/w. Pass the Certificate.md",
+    "tmp/20251109050905_ILFREIGHT.zip",
     "11. Introduction to Active Directory Enumeration & Attacks/n. Credentialed Enumeration - from Windows.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
-    "tmp/New Text Document.txt",
-    "Pasted image 20251104165144.png",
-    "tmp/20251104062533_Ingested.zip",
-    "tmp/ilfreight_bh.zip",
-    "Pasted image 20251103165806.png",
-    "Pasted image 20251103144914.png",
-    "11. Introduction to Active Directory Enumeration & Attacks/l. Enumerating Security Controls.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/k. Internal Password Praying - from Windows.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/j. Internal Password Spraying - from Linux.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/i. Password Spraying - Making a Target User List.md",
-    "8. Password Attacks/u. Pass the Ticket (PtT) from Windows.md",
-    "8. Password Attacks/v. Pass the Ticket (PtT) from Linux.md",
-    "8. Password Attacks/t. Pass The Hash (PtH).md",
-    "8. Password Attacks/q. Credentials Hunting in Linux.md",
-    "Imagery.md",
-    "tmp/exploit.py",
-    "11. Introduction to Active Directory Enumeration & Attacks/h. Enumerating & Retrieving Password Policies.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/g. Password Spraying Overview.md",
-    "tmp/hash.txt",
-    "tmp/script.sh",
-    "11. Introduction to Active Directory Enumeration & Attacks/f. LLMNR & NBT-NS Poisoning - from Windows.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/e. LLMNR & NBT-NS Poisoning - from Linux.md",
-    "tmp/backup_agent",
-    "tmp/wley",
-    "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
+    "Pasted image 20251109135922.png",
+    "Pasted image 20251109135434.png",
+    "Pasted image 20251109135353.png",
+    "Pasted image 20251109135334.png",
     "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/c. External Recon and Enumeration Principles.md",
-    "Conversor.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/b. Scenario.md"
+    "9. Attacking Common Services/g. Attacking SQL Databases.md",
+    "9. Attacking Common Services/k. Attacking Common Services - Easy.md",
+    "9. Attacking Common Services/l. Attacking Common Services - Medium.md",
+    "Signed.md",
+    "tmp/MultiExploit",
+    "11. Introduction to Active Directory Enumeration & Attacks/r. Access Control List (ACL) Abuse Primer.md",
+    "Strutted.md",
+    "tmp/cmd.jsp",
+    "tmp/CVE-2024-53677-POC",
+    "tmp/exploit.py",
+    "tmp/CVE-2024-53677",
+    "tmp/jsp_reverse_shell.jsp",
+    "tmp/shell.jar",
+    "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/a. Tools of the Trade.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/q. Kerberoasting - from Windows.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/p. Kerberoasting - from Linux.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
+    "11. Introduction to Active Directory Enumeration & Attacks/l. Enumerating Security Controls.md"
   ]
 }
