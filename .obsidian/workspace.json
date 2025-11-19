@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "1a33d53f345e09cd",
+        "id": "7eb2e83c4d796156",
         "type": "tabs",
         "children": [
           {
-            "id": "0f6bb744b6ed6760",
+            "id": "6c35f6b68f55f86b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11. Introduction to Active Directory Enumeration & Attacks/v. Privileged Access.md",
+                "file": "16. SQLMap Essentials/b. Getting Started with SQLMap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "v. Privileged Access"
+              "title": "b. Getting Started with SQLMap"
+            }
+          },
+          {
+            "id": "88dd4a849f0b2762",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "15. SQL Injection Fundamentals/o. Writing Files.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "o. Writing Files"
             }
           }
         ]
@@ -53,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wley",
+                "query": "ligolo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1ec5c6ecf6da003e",
@@ -181,53 +194,53 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "0f6bb744b6ed6760",
+  "active": "6c35f6b68f55f86b",
   "lastOpenFiles": [
-    "Pasted image 20251109195543.png",
-    "Pasted image 20251109195542.png",
-    "Pasted image 20251109195524.png",
-    "Pasted image 20251109195131.png",
-    "Pasted image 20251109195104.png",
-    "11. Introduction to Active Directory Enumeration & Attacks/u. DCSync.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/v. Privileged Access.md",
-    "tmp/mimikatz.log",
-    "11. Introduction to Active Directory Enumeration & Attacks/t. ACL Abuse Tactics.md",
-    "Pasted image 20251109170710.png",
-    "Pasted image 20251109164033.png",
-    "tmp/hash",
-    "11. Introduction to Active Directory Enumeration & Attacks/m. Credentialed Enumeration - from Linux.md",
+    "16. SQLMap Essentials/a. SQLMap Overview.md",
+    "16. SQLMap Essentials/b. Getting Started with SQLMap.md",
+    "15. SQL Injection Fundamentals/b. Intro to Databases.md",
+    "16. SQLMap Essentials",
+    "15. SQL Injection Fundamentals/q. Skills Assessment - SQL Injection Fundamentals.md",
+    "15. SQL Injection Fundamentals/Untitled",
+    "15. SQL Injection Fundamentals/r..md",
+    "15. SQL Injection Fundamentals/o. Writing Files.md",
+    "15. SQL Injection Fundamentals/n. Reading Files.md",
+    "15. SQL Injection Fundamentals/k. Union Clause.md",
+    "15. SQL Injection Fundamentals/l. Union Injection.md",
+    "15. SQL Injection Fundamentals/m. Database Enumeration.md",
+    "15. SQL Injection Fundamentals/i. Subverting Query Logic.md",
+    "tmp/req",
+    "15. SQL Injection Fundamentals/h. Intro to SQL Injections.md",
+    "15. SQL Injection Fundamentals/g. SQL Operators.md",
+    "15. SQL Injection Fundamentals/f. Query Results.md",
+    "15. SQL Injection Fundamentals/e. SQL Statements.md",
+    "15. SQL Injection Fundamentals/d. Intro to MySQL.md",
+    "15. SQL Injection Fundamentals/c. Types of Databases.md",
+    "15. SQL Injection Fundamentals/a. Introduction.md",
+    "15. SQL Injection Fundamentals/p. Mitigating SQL Injection.md",
+    "15. SQL Injection Fundamentals/j. Using Comments.md",
+    "Pasted image 20251119123042.png",
+    "Pasted image 20251119122908.png",
+    "Pasted image 20251119121935.png",
+    "Pasted image 20251119121837.png",
     "8. Password Attacks/z. Skill Assessment - Password Attacks.md",
-    "8. Password Attacks/g. Cracking Protected Archives.md",
-    "8. Password Attacks/k. Attacking SAM, SYSTEM and SECURITY.md",
-    "8. Password Attacks/j. Windows Authentication Process.md",
-    "8. Password Attacks/i. Spraying, Stuffing, and Defaults.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/s. ACL Enumeration.md",
+    "Pasted image 20251119114536.png",
+    "8. Password Attacks/v. Pass the Ticket (PtT) from Linux.md",
+    "Pasted image 20251118161311.png",
+    "Pasted image 20251118161152.png",
+    "Pasted image 20251118160929.png",
+    "Pasted image 20251118160805.png",
+    "Pasted image 20251118155918.png",
+    "7. Using The Metasploit Framework/j. Meterpreter.md",
     "8. Password Attacks/w. Pass the Certificate.md",
-    "tmp/20251109050905_ILFREIGHT.zip",
-    "11. Introduction to Active Directory Enumeration & Attacks/n. Credentialed Enumeration - from Windows.md",
-    "Pasted image 20251109135922.png",
-    "Pasted image 20251109135434.png",
-    "Pasted image 20251109135353.png",
-    "Pasted image 20251109135334.png",
-    "9. Attacking Common Services/m. Attacking Common Services - Hard.md",
-    "9. Attacking Common Services/g. Attacking SQL Databases.md",
-    "9. Attacking Common Services/k. Attacking Common Services - Easy.md",
-    "9. Attacking Common Services/l. Attacking Common Services - Medium.md",
-    "Signed.md",
-    "tmp/MultiExploit",
-    "11. Introduction to Active Directory Enumeration & Attacks/r. Access Control List (ACL) Abuse Primer.md",
-    "Strutted.md",
-    "tmp/cmd.jsp",
-    "tmp/CVE-2024-53677-POC",
-    "tmp/exploit.py",
-    "tmp/CVE-2024-53677",
-    "tmp/jsp_reverse_shell.jsp",
-    "tmp/shell.jar",
-    "11. Introduction to Active Directory Enumeration & Attacks/d. Initial Enumeration of the Domain.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/a. Tools of the Trade.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/q. Kerberoasting - from Windows.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/p. Kerberoasting - from Linux.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/o. Living Off the Land.md",
-    "11. Introduction to Active Directory Enumeration & Attacks/l. Enumerating Security Controls.md"
+    "14. Login Brute Force/m. Skill Assessment - Part 2.md",
+    "15. SQL Injection Fundamentals",
+    "14. Login Brute Force/j. Web Services.md",
+    "tmp/2023-200_most_used_passwords.txt",
+    "tmp/pass.txt",
+    "tmp/top-usernames-shortlist.txt",
+    "tmp/users.txt",
+    "tmp/jane-filtered.txt",
+    "tmp/jane.txt"
   ]
 }

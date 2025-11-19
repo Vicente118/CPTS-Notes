@@ -67,7 +67,7 @@ Password: Texas123!@#
 3. Set up Ligolo to make DMZ01 machine our pivot
 ```shell
 DONT RUN LIGOLO ON EXEGOL
-
+(ASTUCE to make it work properly: sudo ip link set tun0 mtu 1000) 
 1. Import agent binary to compromised host DMZ01 with http server.
 2. Create interface for ligolo :
 > sudo ip tuntap add user vdarras mode tun ligolo

