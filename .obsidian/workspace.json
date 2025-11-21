@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7eb2e83c4d796156",
+        "id": "05bbe61da8fe58fc",
         "type": "tabs",
         "children": [
           {
-            "id": "6c35f6b68f55f86b",
+            "id": "77eda19a01f5717a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "16. SQLMap Essentials/b. Getting Started with SQLMap.md",
+                "file": "18. File Inclusion/a. Intro to File Inclusion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "b. Getting Started with SQLMap"
-            }
-          },
-          {
-            "id": "88dd4a849f0b2762",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "15. SQL Injection Fundamentals/o. Writing Files.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "o. Writing Files"
+              "title": "a. Intro to File Inclusion"
             }
           }
         ]
@@ -67,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ligolo",
+                "query": "onerror",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1ec5c6ecf6da003e",
@@ -194,53 +181,53 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "6c35f6b68f55f86b",
+  "active": "77eda19a01f5717a",
   "lastOpenFiles": [
     "16. SQLMap Essentials/a. SQLMap Overview.md",
-    "16. SQLMap Essentials/b. Getting Started with SQLMap.md",
-    "15. SQL Injection Fundamentals/b. Intro to Databases.md",
-    "16. SQLMap Essentials",
-    "15. SQL Injection Fundamentals/q. Skills Assessment - SQL Injection Fundamentals.md",
-    "15. SQL Injection Fundamentals/Untitled",
-    "15. SQL Injection Fundamentals/r..md",
-    "15. SQL Injection Fundamentals/o. Writing Files.md",
-    "15. SQL Injection Fundamentals/n. Reading Files.md",
-    "15. SQL Injection Fundamentals/k. Union Clause.md",
-    "15. SQL Injection Fundamentals/l. Union Injection.md",
-    "15. SQL Injection Fundamentals/m. Database Enumeration.md",
-    "15. SQL Injection Fundamentals/i. Subverting Query Logic.md",
+    "18. File Inclusion/a. Intro to File Inclusion.md",
+    "18. File Inclusion",
+    "17. Cross-Site-Scripting (XSS)/Untitled",
+    "17. Cross-Site-Scripting (XSS)/j. Skills Assessment.md",
+    "17. Cross-Site-Scripting (XSS)/f. Defacing.md",
+    "17. Cross-Site-Scripting (XSS)/d. DOM XSS.md",
+    "17. Cross-Site-Scripting (XSS)/e. XXS Discovery.md",
+    "17. Cross-Site-Scripting (XSS)/h. Session Hijacking.md",
+    "17. Cross-Site-Scripting (XSS)/g. Phishing.md",
+    "Pasted image 20251121171749.png",
+    "17. Cross-Site-Scripting (XSS)/i. XSS Prevention.md",
+    "Pasted image 20251121160806.png",
+    "Pasted image 20251121155612.png",
+    "Pasted image 20251121155602.png",
+    "tmp/tmpserver",
+    "Pasted image 20251121150250.png",
+    "Pasted image 20251121150158.png",
+    "Pasted image 20251121145216.png",
+    "8. Password Attacks/d. Introduction to Hashcat.md",
+    "8. Password Attacks/c. Introduction to John The Ripper.md",
+    "Pasted image 20251121143528.png",
+    "8. Password Attacks/b. Introduction to Password Cracking.md",
+    "8. Password Attacks/a. Introduction.md",
+    "Pasted image 20251121132955.png",
+    "17. Cross-Site-Scripting (XSS)/b. Stored XSS.md",
+    "Pasted image 20250923121017.png",
+    "17. Cross-Site-Scripting (XSS)/c. Reflected XSS.md",
+    "17. Cross-Site-Scripting (XSS)/a. Introduction.md",
+    "16. SQLMap Essentials/k. Skill Assessment.md",
+    "17. Cross-Site-Scripting (XSS)",
+    "16. SQLMap Essentials/Untitled",
+    "16. SQLMap Essentials/i. Bypassing Web Application Protections.md",
+    "16. SQLMap Essentials/g. Database Enumeration.md",
+    "16. SQLMap Essentials/j. OS Exploitation.md",
+    "16. SQLMap Essentials/h. Advanced Database Enumeration.md",
+    "16. SQLMap Essentials/f. Attacking Tuning.md",
+    "OSINT.md",
+    "tmp/id_rsa",
+    "tmp/Craft.md",
+    "tmp/dbt.py",
+    "16. SQLMap Essentials/e. Handling SQLMap Errors.md",
+    "16. SQLMap Essentials/d. Running SQLMap on a HTTP Request.md",
     "tmp/req",
-    "15. SQL Injection Fundamentals/h. Intro to SQL Injections.md",
-    "15. SQL Injection Fundamentals/g. SQL Operators.md",
-    "15. SQL Injection Fundamentals/f. Query Results.md",
-    "15. SQL Injection Fundamentals/e. SQL Statements.md",
-    "15. SQL Injection Fundamentals/d. Intro to MySQL.md",
-    "15. SQL Injection Fundamentals/c. Types of Databases.md",
-    "15. SQL Injection Fundamentals/a. Introduction.md",
-    "15. SQL Injection Fundamentals/p. Mitigating SQL Injection.md",
-    "15. SQL Injection Fundamentals/j. Using Comments.md",
-    "Pasted image 20251119123042.png",
-    "Pasted image 20251119122908.png",
-    "Pasted image 20251119121935.png",
-    "Pasted image 20251119121837.png",
-    "8. Password Attacks/z. Skill Assessment - Password Attacks.md",
-    "Pasted image 20251119114536.png",
-    "8. Password Attacks/v. Pass the Ticket (PtT) from Linux.md",
-    "Pasted image 20251118161311.png",
-    "Pasted image 20251118161152.png",
-    "Pasted image 20251118160929.png",
-    "Pasted image 20251118160805.png",
-    "Pasted image 20251118155918.png",
-    "7. Using The Metasploit Framework/j. Meterpreter.md",
-    "8. Password Attacks/w. Pass the Certificate.md",
-    "14. Login Brute Force/m. Skill Assessment - Part 2.md",
-    "15. SQL Injection Fundamentals",
-    "14. Login Brute Force/j. Web Services.md",
-    "tmp/2023-200_most_used_passwords.txt",
-    "tmp/pass.txt",
-    "tmp/top-usernames-shortlist.txt",
-    "tmp/users.txt",
-    "tmp/jane-filtered.txt",
-    "tmp/jane.txt"
+    "16. SQLMap Essentials",
+    "15. SQL Injection Fundamentals/Untitled"
   ]
 }
