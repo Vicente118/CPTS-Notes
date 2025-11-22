@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "05bbe61da8fe58fc",
+        "id": "e6835ba0d4acbb8f",
         "type": "tabs",
         "children": [
           {
-            "id": "77eda19a01f5717a",
+            "id": "04416734b55e68ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "18. File Inclusion/a. Intro to File Inclusion.md",
+                "file": "18. File Inclusion/k. Skills Assessment - File Inclusion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "a. Intro to File Inclusion"
+              "title": "k. Skills Assessment - File Inclusion"
             }
           }
         ]
@@ -53,12 +53,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "onerror",
+                "query": "_GET",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
+                "sortOrder": "byCreatedTime"
               },
               "icon": "lucide-search",
               "title": "Search"
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1ec5c6ecf6da003e",
@@ -181,53 +180,52 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "77eda19a01f5717a",
+  "active": "04416734b55e68ea",
   "lastOpenFiles": [
-    "16. SQLMap Essentials/a. SQLMap Overview.md",
+    "18. File Inclusion/f. Remote File Inclusion (RFI).md",
+    "18. File Inclusion/g. LFI and File Uploads.md",
+    "18. File Inclusion/e. PHP Wrappers.md",
+    "tmp/phpv.txt",
+    "18. File Inclusion/d. PHP Filters.md",
+    "18. File Inclusion/c. Basic Bypasses.md",
+    "18. File Inclusion/b. Local File Inclusion (LFI).md",
     "18. File Inclusion/a. Intro to File Inclusion.md",
+    "18. File Inclusion/h. Log Poisoning.md",
+    "18. File Inclusion/i. Automated Scanning.md",
+    "18. File Inclusion/j. File Inclusion Prevention.md",
+    "18. File Inclusion/k. Skills Assessment - File Inclusion.md",
+    "tmp/shell.pdf",
+    "Pasted image 20251122003054.png",
+    "4. Vulnerability Assessment/d. Common Vulnerability Scoring System (CVSS).md",
+    "4. Vulnerability Assessment/c. Vulnerability Assessment.md",
+    "4. Vulnerability Assessment/e. Common Vulnerabilities and Exposures (CVEs).md",
+    "4. Vulnerability Assessment/f. Vulnerability Scanning Overview.md",
+    "4. Vulnerability Assessment/g. Getting Started with Nessus.md",
+    "4. Vulnerability Assessment/h. Nessus Scan.md",
+    "4. Vulnerability Assessment/i. Advanced Settings.md",
+    "4. Vulnerability Assessment/j. Working with Nessus Scan Output.md",
+    "4. Vulnerability Assessment/k. Scanning Issues.md",
+    "i. Automated S.md",
+    "3. Information Gathering - Web/a. Introduction.md",
+    "3. Information Gathering - Web/d. DNS.md",
+    "3. Information Gathering - Web/c. Utilizing WHOIS.md",
+    "3. Information Gathering - Web/b. WHOIS.md",
+    "tmp/Poison",
+    "Pasted image 20251121225107.png",
+    "Pasted image 20251121225027.png",
+    "Pasted image 20251121224930.png",
+    "Pasted image 20251121223502.png",
+    "tmp/shell.gif",
+    "tmp/shell.php",
+    "Pasted image 20251121180838.png",
+    "Pasted image 20251121175625.png",
     "18. File Inclusion",
     "17. Cross-Site-Scripting (XSS)/Untitled",
-    "17. Cross-Site-Scripting (XSS)/j. Skills Assessment.md",
-    "17. Cross-Site-Scripting (XSS)/f. Defacing.md",
-    "17. Cross-Site-Scripting (XSS)/d. DOM XSS.md",
-    "17. Cross-Site-Scripting (XSS)/e. XXS Discovery.md",
-    "17. Cross-Site-Scripting (XSS)/h. Session Hijacking.md",
-    "17. Cross-Site-Scripting (XSS)/g. Phishing.md",
     "Pasted image 20251121171749.png",
-    "17. Cross-Site-Scripting (XSS)/i. XSS Prevention.md",
     "Pasted image 20251121160806.png",
-    "Pasted image 20251121155612.png",
-    "Pasted image 20251121155602.png",
     "tmp/tmpserver",
-    "Pasted image 20251121150250.png",
-    "Pasted image 20251121150158.png",
-    "Pasted image 20251121145216.png",
-    "8. Password Attacks/d. Introduction to Hashcat.md",
-    "8. Password Attacks/c. Introduction to John The Ripper.md",
-    "Pasted image 20251121143528.png",
-    "8. Password Attacks/b. Introduction to Password Cracking.md",
-    "8. Password Attacks/a. Introduction.md",
-    "Pasted image 20251121132955.png",
-    "17. Cross-Site-Scripting (XSS)/b. Stored XSS.md",
-    "Pasted image 20250923121017.png",
-    "17. Cross-Site-Scripting (XSS)/c. Reflected XSS.md",
-    "17. Cross-Site-Scripting (XSS)/a. Introduction.md",
-    "16. SQLMap Essentials/k. Skill Assessment.md",
     "17. Cross-Site-Scripting (XSS)",
     "16. SQLMap Essentials/Untitled",
-    "16. SQLMap Essentials/i. Bypassing Web Application Protections.md",
-    "16. SQLMap Essentials/g. Database Enumeration.md",
-    "16. SQLMap Essentials/j. OS Exploitation.md",
-    "16. SQLMap Essentials/h. Advanced Database Enumeration.md",
-    "16. SQLMap Essentials/f. Attacking Tuning.md",
-    "OSINT.md",
-    "tmp/id_rsa",
-    "tmp/Craft.md",
-    "tmp/dbt.py",
-    "16. SQLMap Essentials/e. Handling SQLMap Errors.md",
-    "16. SQLMap Essentials/d. Running SQLMap on a HTTP Request.md",
-    "tmp/req",
-    "16. SQLMap Essentials",
-    "15. SQL Injection Fundamentals/Untitled"
+    "tmp/id_rsa"
   ]
 }
